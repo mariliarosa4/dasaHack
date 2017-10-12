@@ -3,81 +3,75 @@
 
     <head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Login</title>
-        <!-- Latest compiled and minified CSS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-
-        <link rel="stylesheet" href="../assets/css/style.css">
-        <link rel="stylesheet" href="../assets/css/form-elements.css">
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type = "text/css" href="../materialize/css/materialize.min.css">
+        <link rel="stylesheet" type = "text/css" href="../assets/css/style.css">
 
 
     </head>
 
     <body>
+        <div class="section"></div>
+        <main>
+            <center>
+                {#  <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />#}
+                <div class="section"></div>
+                <div class="section"></div>
 
-        <!-- Top content -->
-        <div class="top-content">
 
-            <div class="inner-bg">
                 <div class="container">
 
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Login</h3>
-                                    {#   <p>Enter your username and password to log on:</p>#}
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-lock"></i>
+                    <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+                        <form class="col s12" method="post">
+                            <h5 class="teal-text">Login</h5>
+                            <div class='row'>
+                                <div class='col s12'>
                                 </div>
                             </div>
-                            <div class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-username">Username</label>
-                                        <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-password">Password</label>
-                                        <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-                                    </div>
-                                    <button type="submit" class="btn">Sign in!</button>
-                                </form>
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+                                    <input class='validate' type='email' name='email' id='email' />
+                                    <label for='email'>Enter your email</label>
+                                </div>
                             </div>
-                        </div>
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+                                    <input class='validate' type='password' name='password' id='password' />
+                                    <label for='password'>Enter your password</label>
+                                </div>
+                                <label style='float: right;'>
+                                    <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+                                </label>
+                            </div>
+
+                            <br />
+                            <center>
+                                <div class='row'>
+                                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                                </div>
+                            </center>
+                        </form>
                     </div>
-
                 </div>
-            </div>
 
-        </div>
+            </center>
 
 
-        <!-- Javascript -->
+        </main>
 
-        <script src="../assets/js/scripts.js"></script>
-
-        <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
-        <![endif]-->
-
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
     </body>
 
 </html>
