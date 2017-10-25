@@ -17,144 +17,657 @@
     </head>
 
     <body>
-        
+
         <main>
-            <center>
-              <nav class="nav-extended teal lighten-1">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">Ficha de atendimento de genética clínica</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-       <li><a href="#">X</a></li>
-        <li><a href="#">Y</a></li>
-        <li><a href="#">Z</a></li>
-      </ul>
-    </div>
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a class="active" href="#test1">Identificação</a></li>
-        <li class="tab"><a href="#test2">Historia Gestacional e Neonatal</a></li>
-        <li class="tab disabled"><a href="#test3">Evolução Neuropsicomotora</a></li>
-        <li class="tab"><a href="#test4">História Familiar</a></li>
-      </ul>
-    </div>
-  </nav>
 
-                <div class="container">
-
-                    <div class="z-depth-1 grey lighten-4 row" >
-                        <div class="row">
-                            <div class="col-md-6 col-md-offset-3">
-
-                                <!-- progressbar -->
-                                <ul id="progressbar">
-                                    <li class="active">Identificação</li>
-                                    <li>Historia Gestacional e Neonatal</li>
-                                    <li>Evolução Neuropsicomotora</li>
-
-                                </ul>
-                            </div>
-                            <form class="col s12">
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <i class="material-icons prefix">person</i>
-                                        <input id="nomeSobrenome" type="text" class="validate">
-                                        <label for="nomeSobrenome">Iniciais de nome e sobrenome</label>
-                                    </div>
-                                    <div class="input-field col s6">
-                                        <i class="material-icons prefix">mode_edit</i>
-                                        <input id="codigoProntuario" type="number" class="validate">
-                                        <label for="codigoProntuario">Codigo prontuario</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <i class="material-icons prefix">date_range</i>
-                                        <input type="text" class="datepicker" id="dataNascimento">
-
-                                        <label for="dataNascimento">Data de Nascimento</label>
-                                    </div>
-                                    <div class="input-field col s6">
-                                        <i class="material-icons prefix">date_range</i>
-                                        <input type="text" class="datepicker" id="dataAtendimento">
-
-                                        <label for="dataAtendimento">Data de Atendimento</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    Etnia
-                                    <input class="with-gap"  name="etniaGroup" type="radio" id="euro" />
-                                    <label for="euro" class="black-text">Eurodescendente</label>
-                                    <input  class="with-gap"  name="etniaGroup" type="radio" id="afro" />
-                                    <label for="afro" class="black-text">afrodescendente</label>
-                                    <input  class="with-gap"  name="etniaGroup" type="radio" id="Misto" />
-                                    <label for="Misto" class="black-text">Misto</label>
-                                    <input  class="with-gap"  name="etniaGroup" type="radio" id="Outro" />
-                                    <label for="Outro" class="black-text">Outro</label>
-                                </div>
-                                <div class='row'>
-                                    <div class="input-field col s4">
-                                        Sexo 
-                                        <input class="with-gap"  name="sexo" type="radio" id="fem" />
-                                        <label for="fem" class="black-text">Feminino</label>
-                                        <input  class="with-gap"  name="sexo" type="radio" id="mas" />
-                                        <label for="mas" class="black-text">Masculino</label>
-                                    </div>
-
-                                    <div class="input-field col s8">
-                                        <i class="material-icons prefix">announcement</i>
-                                        <input id="motivoConsulta" type="text" class="validate">
-                                        <label for="motivoConsulta">Motivo da consulta</label>
-                                    </div>
-
-                                </div>
-                                <div class='row'>
-                                    <div class="col s12">
-                                        Local de atendimento:
-                                        <div class="input-field inline">
-                                            <input class="with-gap"  name="localAtendimentoGroup" type="radio" id="faculdade" />
-                                            <label for="faculdade" class="black-text">Faculdade</label>
-                                            <input  class="with-gap"  name="localAtendimentoGroup" type="radio" id="sAntonio" />
-                                            <label for="sAntonio" class="black-text">Hospital Santo Antonio</label>
-                                            <input  class="with-gap"  name="localAtendimentoGroup" type="radio" id="sClara" />
-                                            <label for="sClara" class="black-text">Hospital Santa Clara</label>
-                                            <input  class="with-gap"  name="localAtendimentoGroup" type="radio" id="outroHospital" />
-                                            <label for="outroHospital" class="black-text">Outro hospital da Santa Casa</label>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                                <div class='row'>
-                                    <div class="col s4 offset-s4">
-
-                                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal'>Salvar
-                                            <i class="material-icons right">send</i></button>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>                    
-
-
-                    </div>
+            <nav class="nav-extended teal lighten-1">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo right">Ficha de atendimento de genética clínica</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a href="#">X</a></li>
+                        <li><a href="#">Y</a></li>
+                        <li><a href="#">Z</a></li>
+                    </ul>
                 </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a href="#test1">Identificação</a></li>
+                        <li class="tab"><a class="active" href="#test2">Historia Gestacional e Neonatal</a></li>
+                        <li class="tab disabled"><a href="#test3">Evolução Neuropsicomotora</a></li>
+                        <li class="tab"><a href="#test4">História Familiar</a></li>
+                    </ul>
+                </div>
+            </nav>
 
-            </center>
+            <div class="container" id="teste1">
+
+                <div class="z-depth-1 grey lighten-4 row" >
+
+                    <form class="col s12">
+                        <div class="row">
 
 
-        </main>
 
-        <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
-        <script type="text/javascript" src="../assets/js/identificacao.js"></script>
-    </body>
+
+                            <div class="row">
+
+                                <div class="input-field col s3">
+
+                                    <input id="Gesta" type="number" class="validate">
+                                    <label for="Gesta">Gesta</label>
+                                </div>
+                                <div class="input-field col s3">
+
+                                    <input id="Para" type="number" class="validate">
+                                    <label for="Para">Para</label>
+                                </div>
+                                <div class="input-field col s3">
+                                    <input id="cesaria" type="number" class="validate">
+                                    <label for="cesaria">Cesaria</label>
+                                </div>
+                                <div class="input-field col s3">
+                                    <input id="abortoEspontaneo" type="number" class="validate">
+                                    <label for="abortoEspontaneo">Aborto espontaneo</label>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s3">
+                                    <input id="abortoProvocado" type="number" class="validate">
+                                    <label for="abortoProvocado">Aborto provocado</label>
+                                </div>
+
+                                <div class="input-field col s3">
+                                    <input id="gestaEctopica" type="number" class="validate">
+                                    <label for="gestaEctopica">Gestação Ectopica</label>
+                                </div>
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="preNatal" />
+                                        <label for="preNatal">Realizou Pré Natal?</label>
+                                    </p>
+                                </div>
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="examesPreNatal" />
+                                        <label for="examesPreNatal">Fez Exames Pré Natal?</label>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="ameacaAborto" />
+                                        <label for="ameacaAborto">Teve Ameaças de Aborto?</label>
+                                    </p>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="numeroAmeacasAborto" type="number" class="validate">
+                                    <label for="numeroAmeacasAborto">Numero de ameaças de aborto</label>
+                                </div> 
+                                <div class="col s5">
+                                    <div class="col">
+                                        <p>
+                                            <input type="checkbox" id="primeiroMesAB" />
+                                            <label for="primeiroMesAB">Primeiro mês</label>
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            <input type="checkbox" id="segundoMesAB" />
+                                            <label for="segundoMesAB">Segundo mês</label>
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            <input type="checkbox" id="terceiroMesAB" />
+                                            <label for="terceiroMesAB">Terceiro mês</label>
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            <input type="checkbox" id="quartoMesAB" />
+                                            <label for="quartoMesAB">Quarto mês</label>
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            <input type="checkbox" id="QuintoMesAB" />
+                                            <label for="QuintoMesAB">Quinto mês    </label>
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            <input type="checkbox" id="naoSeiMesAB" />
+                                            <label for="naoSeiMesAB">Não sei</label>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row listaDoencaAgudaCronica">
+
+                                <div class="col s4">
+                                    <p>
+                                        <input type="checkbox" id="doencasAgCro" />
+                                        <label for="doencasAgCro">Doenças Agudas ou crônicas</label>
+                                    </p>
+                                </div>
+                                <div class="input-field col s6 inputDoencaAgudaCronica" >
+                                    <input id="dsDoencaAgCro" type="text" class="validate">
+                                    <label for="dsDoencaAgCro">Nome Doença Aguda ou Crônica</label>                                   
+                                </div>
+                                <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addNomeDoencaAgudaCronica();">
+                                    <i class="material-icons">add</i>
+                                </a>
+                            </div>
+                            <div class="row">
+
+                                <div class="col s4">
+                                    <p>
+                                        <input type="checkbox" id="usoMedicamento" />
+                                        <label for="usoMedicamento">Fez uso de Medicamento durante a gestação?</label>
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row teal lighten-4">
+                                <div class="listaMedicamento " style="display: none;">
+                                    <div class="medicamento">
+                                        <div class="input-field col s5">
+                                            <i class="material-icons prefix">textsms</i>
+                                            <input type="text" id="autocomplete-input" class="autocomplete">
+                                            <label for="autocomplete-input">Nome do medicamento</label>
+
+                                        </div>
+
+                                        <div class="input-field col s5" >
+                                            <input id="medicamentoDescricao" type="text" class="validate">
+                                            <label for="medicamentoDescricao">Descrição do Medicamento</label>                                   
+                                        </div>
+
+                                        <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addMedicamento();">
+                                            <i class="material-icons">add</i>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mesesUsoMedicamento teal lighten-4" style="display: none;">
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="primeiroMesMedicamentoGestacaoUso" />
+                                        <label for="primeiroMesMedicamentoGestacaoUso">Primeiro mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="segundoMesMedicamentoGestacaoUso" />
+                                        <label for="segundoMesMedicamentoGestacaoUso">Segundo mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="terceiroMesMedicamentoGestacaoUso" />
+                                        <label for="terceiroMesMedicamentoGestacaoUso">Terceiro mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="quartoMesMedicamentoGestacaoUso" />
+                                        <label for="quartoMesMedicamentoGestacaoUso">Quarto mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="quintoMesMedicamentoGestacaoUso" />
+                                        <label for="quintoMesMedicamentoGestacaoUso">Quinto mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="sextoMesMedicamentoGestacaoUso" />
+                                        <label for="sextoMesMedicamentoGestacaoUso">Sexto mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="setimoMesMedicamentoGestacaoUso" />
+                                        <label for="setimoMesMedicamentoGestacaoUso">Sétimo mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="oitavoMesMedicamentoGestacaoUso" />
+                                        <label for="oitavoMesMedicamentoGestacaoUso">Oitavo mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="nonoMesMedicamentoGestacaoUso" />
+                                        <label for="nonoMesMedicamentoGestacaoUso">Nono mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="naoSeiMesMedicamentoGestacaoUso" />
+                                        <label for="naoSeiMesMedicamentoGestacaoUso">Não sei</label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>
+                                        <input type="checkbox" id="usoDrogasIlicitas" />
+                                        <label for="usoDrogasIlicitas">Uso de Drogas Ilícitas</label>
+                                    </p>
+                                </div> 
+                            </div>
+                            <div class="row teal lighten-4">
+                                <div class="listaDroga" style="display: none;">
+                                    <div class="droga">
+                                        <div class="input-field col s5">
+                                            <i class="material-icons prefix">textsms</i>
+                                            <input type="text" id="autocomplete-input" class="autocomplete">
+                                            <label for="autocomplete-input">Nome da droga</label>
+
+                                        </div>
+
+                                        <div class="input-field col s5" >
+                                            <input id="drogaDescricao" type="text" class="validate">
+                                            <label for="drogaDescricao">Descrição do uso da droga</label>                                   
+                                        </div>
+
+                                        <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addDroga();">
+                                            <i class="material-icons">add</i>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mesesUsoDroga teal lighten-4" style="display: none;">
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="primeiroMesDrogaUso" />
+                                        <label for="primeiroMesDrogaUso">Primeiro mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="segundoMesDrogaUso" />
+                                        <label for="segundoMesDrogaUso">Segundo mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="terceiroMesDrogaUso" />
+                                        <label for="terceiroMesDrogaUso">Terceiro mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="quartoMesDrogaUso" />
+                                        <label for="quartoMesDrogaUso">Quarto mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="quintoMesDrogaUso" />
+                                        <label for="quintoMesDrogaUso">Quinto mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="sextoMesDrogaUso" />
+                                        <label for="sextoMesDrogaUso">Sexto mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="setimoMesDrogaUso" />
+                                        <label for="setimoMesDrogaUso">Sétimo mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="oitavoMesDrogaUso" />
+                                        <label for="oitavoMesDrogaUso">Oitavo mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="nonoMesDrogaUso" />
+                                        <label for="nonoMesDrogaUso">Nono mês</label>
+                                    </p>
+                                </div>
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="naoSeiMesDrogaUso" />
+                                        <label for="naoSeiMesDrogaUso">Não sei</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s2">
+                                <p>
+                                    <input type="checkbox" id="fumo" />
+                                    <label for="fumo">Fumante</label>
+                                </p>
+                            </div>
+
+                            <div class="input-field col s4 descricaoFumo" style="display: none">
+
+                                <input type="text" id="descricaoFumo" class="validate">
+                                <label for="descricaoFumo">Descricao do uso do fumo</label>
+
+                            </div>
+                            <div class="col s2">
+                                <p>
+                                    <input type="checkbox" id="alcool" />
+                                    <label for="alcool">Uso de Alcool</label>
+                                </p>
+                            </div>
+                            <div class="input-field col s4 descricaoAlcool" style="display: none">
+
+                                <input type="text" id="descricaoAlcool" class="validate">
+                                <label for="descricaoAlcool">Descricao do uso do alcool</label>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col s2">
+                                <p>
+                                    <input type="checkbox" id="ultrasonografias" />
+                                    <label for="ultrasonografias">Realizou ultrasonografias</label>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="row listaUltrassonografias" style="display: none">
+                            <div class="row">
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="rastreioPrimeiroTrimestre" />
+                                        <label for="rastreioPrimeiroTrimestre">Rastreio de Primeiro Trimestre</label>
+                                    </p>
+                                </div>
+
+                                <div class="input-field col s3" >
+
+                                    <input type="number" id="rastreioPrimeiroTrimestreQuantidade" class="validate">
+                                    <label for="rastreioPrimeiroTrimestreQuantidade">Numero de vezes que realizou</label>
+
+                                </div>
+
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="rastreioPrimeiroTrimestreAlterado" />
+                                        <label for="rastreioPrimeiroTrimestreAlterado">Resultado Alterado</label>
+                                    </p>
+                                </div>
+                                <div class="input-field col s4" >
+
+                                    <input type="text" id="rastreioPrimeiroTrimestreDsAlterado" class="validate">
+                                    <label for="rastreioPrimeiroTrimestreDsAlterado">Descricao da alteracao</label>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="ecoObstetricaTrimestre" />
+                                        <label for="ecoObstetricaTrimestre">Ecografia Obstetrica </label>
+                                    </p>
+                                </div>
+
+                                <div class="input-field col s3" >
+
+                                    <input type="number" id="ecoObstetricaQuantidade" class="validate">
+                                    <label for="ecoObstetricaQuantidade">Numero de vezes que realizou</label>
+
+                                </div>
+
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="ecoObstetricaAlterado" />
+                                        <label for="ecoObstetricaAlterado">Resultado Alterado</label>
+                                    </p>
+                                </div>
+                                <div class="input-field col s4" >
+
+                                    <input type="text" id="ecoObstetricaDsAlterado" class="validate">
+                                    <label for="ecoObstetricaDsAlterado">Descricao da alteracao</label>
+
+                                </div>
+                            </div>
+                             <div class="row">
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="ecoMorfologicaTrimestre" />
+                                        <label for="ecoMorfologicaTrimestre">Ecografia Morfologica </label>
+                                    </p>
+                                </div>
+
+                                <div class="input-field col s3" >
+
+                                    <input type="number" id="ecoMorfologicaQuantidade" class="validate">
+                                    <label for="ecoMorfologicaQuantidade">Numero de vezes que realizou</label>
+
+                                </div>
+
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="ecoMorfologicaAlterado" />
+                                        <label for="ecoMorfologicaAlterado">Resultado Alterado</label>
+                                    </p>
+                                </div>
+                                <div class="input-field col s4" >
+
+                                    <input type="text" id="ecoMorfologicaDsAlterado" class="validate">
+                                    <label for="ecoMorfologicaDsAlterado">Descricao da alteracao</label>
+
+                                </div>
+                            </div>
+                             <div class="row">
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="ecocardioFetalTrimestre" />
+                                        <label for="ecocardioFetalTrimestre">Ecocardiografia Fetal </label>
+                                    </p>
+                                </div>
+
+                                <div class="input-field col s3" >
+
+                                    <input type="number" id="ecocardioFetalQuantidade" class="validate">
+                                    <label for="ecocardioFetalQuantidade">Numero de vezes que realizou</label>
+
+                                </div>
+
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="ecocardioFetalAlterado" />
+                                        <label for="ecocardioFetalAlterado">Resultado Alterado</label>
+                                    </p>
+                                </div>
+                                <div class="input-field col s4" >
+
+                                    <input type="text" id="ecocardioFetalDsAlterado" class="validate">
+                                    <label for="ecocardioFetalDsAlterado">Descricao da alteracao</label>
+
+                                </div>
+                            </div>
+                                <div class="row">
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="resMagFetalTrimestre" />
+                                        <label for="resMagFetalTrimestre">Ressonancia Magnetica Fetal </label>
+                                    </p>
+                                </div>
+
+                                <div class="input-field col s3" >
+
+                                    <input type="number" id="resMagFetalQuantidade" class="validate">
+                                    <label for="resMagFetalQuantidade">Numero de vezes que realizou</label>
+
+                                </div>
+
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="resMagFetalAlterado" />
+                                        <label for="resMagFetalAlterado">Resultado Alterado</label>
+                                    </p>
+                                </div>
+                                <div class="input-field col s4" >
+
+                                    <input type="text" id="resMagFetalDsAlterado" class="validate">
+                                    <label for="resMagFetalDsAlterado">Descricao da alteracao</label>
+
+                                </div>
+                            </div>
+                                <div class="row">
+                                <div class="col s3">
+                                    <p>
+                                        <input type="checkbox" id="ecoTridimensionalTrimestre" />
+                                        <label for="ecoTridimensionalTrimestre">Ecografia Tridimensional </label>
+                                    </p>
+                                </div>
+
+                                <div class="input-field col s3" >
+
+                                    <input type="number" id="ecoTridimensionalQuantidade" class="validate">
+                                    <label for="ecoTridimensionalQuantidade">Numero de vezes que realizou</label>
+
+                                </div>
+
+                                <div class="col s2">
+                                    <p>
+                                        <input type="checkbox" id="ecoTridimensionalAlterado" />
+                                        <label for="ecoTridimensionalAlterado">Resultado Alterado</label>
+                                    </p>
+                                </div>
+                                <div class="input-field col s4" >
+
+                                    <input type="text" id="ecocardioFetalDsAlterado" class="validate">
+                                    <label for="ecocardioFetalDsAlterado">Descricao da alteracao</label>
+
+                                </div>
+                            </div>
+                        </div>  
+                        <div class='row'>
+                            <div class="col s4 offset-s4">
+
+                                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal'>Salvar
+                                    <i class="material-icons right">send</i></button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+
+
+        </center>
+
+
+    </main>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../assets/js/identificacao.js"></script>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $('input.autocomplete').autocomplete({
+                data: {
+                    "paracetamol": null,
+                    "dipirona": null,
+                    "tamiflu": 'http://placehold.it/250x250'
+                },
+                limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+                onAutocomplete: function (val) {
+                    // Callback function when value is autcompleted.
+                },
+                minLength: 2, // The minimum length of the input for the autocomplete to start. Default: 1.
+            });
+        });
+
+        function addMedicamento() {
+            var inputLocal = document.getElementsByClassName("medicamento")[0];
+            var clone = inputLocal.cloneNode(true);
+            document.getElementsByClassName("listaMedicamento")[0].appendChild(clone);
+        }
+        function addDroga() {
+            var inputLocal = document.getElementsByClassName("droga")[0];
+            var clone = inputLocal.cloneNode(true);
+            document.getElementsByClassName("listaDroga")[0].appendChild(clone);
+        }
+
+        function addNomeDoencaAgudaCronica() {
+            var inputLocal = document.getElementsByClassName("inputDoencaAgudaCronica")[0];
+            var clone = inputLocal.cloneNode(true);
+            document.getElementsByClassName("listaDoencaAgudaCronica")[0].appendChild(clone);
+        }
+        $(document).on('change', '#usoMedicamento', function () {
+            if (this.checked) {
+                $('.listaMedicamento').show();
+                $('.mesesUsoMedicamento').show();
+
+            } else {
+                $('.listaMedicamento').hide();
+                $('.mesesUsoMedicamento').hide();
+            }
+
+        });
+
+        $(document).on('change', '#usoDrogasIlicitas', function () {
+            if (this.checked) {
+                $('.listaDroga').show();
+                $('.mesesUsoDroga').show();
+
+            } else {
+                $('.listaDroga').hide();
+                $('.mesesUsoDroga').hide();
+            }
+
+        });
+        $(document).on('change', '#fumo', function () {
+            if (this.checked) {
+                $('.descricaoFumo').show();
+            } else {
+                $('.descricaoFumo').hide();
+            }
+        });
+        $(document).on('change', '#alcool', function () {
+            if (this.checked) {
+                $('.descricaoAlcool').show();
+            } else {
+                $('.descricaoAlcool').hide();
+            }
+        });
+        $(document).on('change', '#ultrasonografias', function () {
+            if (this.checked) {
+                $('.listaUltrassonografias').show();
+            } else {
+                $('.listaUltrassonografias').hide();
+            }
+        });
+
+    </script>
+</body>
 
 </html>
