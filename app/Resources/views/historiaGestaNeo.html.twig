@@ -40,7 +40,7 @@
                         <li class="tab"><a target="_self" href="{{web_dir}}identificacao">Identificação</a></li>
                         <li class="tab"><a class="active" href="#test2">Historia Gestacional e Neonatal</a></li>
                         <li class="tab"><a target="_self" href="{{web_dir}}neuropsico">Evolução Neuropsicomotora</a></li>
-                        <li class="tab"><a href="#test4">História Familiar</a></li>
+                        <li class="tab"><a target="_self" href="{{web_dir}}historiafamiliar">História Familiar</a></li>
                     </ul>
                 </div>
             </nav>
@@ -50,319 +50,317 @@
                 <div class="z-depth-1 grey lighten-4 row" >
 
                     <form class="col s12">
+
                         <div class="row">
 
+                            <div class="input-field col s3">
 
-
-
-                            <div class="row">
-
-                                <div class="input-field col s3">
-
-                                    <input id="Gesta" type="number" class="validate">
-                                    <label class="black-text" for="Gesta" >Gesta</label>
-                                </div>
-                                <div class="input-field col s3">
-
-                                    <input id="Para" type="number" class="validate">
-                                    <label class="black-text" for="Para">Para</label>
-                                </div>
-                                <div class="input-field col s3">
-                                    <input id="qtdCesaria" type="number" class="validate">
-                                    <label class="black-text" for="qtdCesaria">Cesaria</label>
-                                </div>
-                                <div class="input-field col s3">
-                                    <input id="abortoEspontaneo" type="number" class="validate">
-                                    <label class="black-text" for="abortoEspontaneo">Aborto espontaneo</label>
-                                </div>
-
+                                <input id="Gesta" type="number" class="validate">
+                                <label class="black-text" for="Gesta" >Gesta</label>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s3">
-                                    <input id="abortoProvocado" type="number" class="validate">
-                                    <label class="black-text" for="abortoProvocado">Aborto provocado</label>
-                                </div>
+                            <div class="input-field col s3">
 
-                                <div class="input-field col s3">
-                                    <input id="gestaEctopica" type="number" class="validate">
-                                    <label class="black-text" for="gestaEctopica">Gestação Ectopica</label>
-                                </div>
-                                <div class="col s3">
-                                    <p>
-                                        <input type="checkbox" id="preNatal" />
-                                        <label class="black-text" for="preNatal">Realizou Pré Natal?</label>
-                                    </p>
-                                </div>
-                                <div class="col s3">
-                                    <p>
-                                        <input type="checkbox" id="examesPreNatal" />
-                                        <label class="black-text" for="examesPreNatal">Fez Exames Pré Natal?</label>
-                                    </p>
-                                </div>
-
-
+                                <input id="Para" type="number" class="validate">
+                                <label class="black-text" for="Para">Para</label>
                             </div>
-                            <div class="row">
-                                <div class="col s3">
-                                    <p>
-                                        <input type="checkbox" id="ameacaAborto" />
-                                        <label class="black-text" for="ameacaAborto">Teve Ameaças de Aborto?</label>
-                                    </p>
-                                </div>
-                                <div class="input-field col s4">
-                                    <input id="numeroAmeacasAborto" type="number" class="validate">
-                                    <label class="black-text" for="numeroAmeacasAborto">Numero de ameaças de aborto</label>
-                                </div> 
-                                <div class="col s5">
-                                    <div class="col">
-                                        <p>
-                                            <input type="checkbox" id="primeiroMesAB" />
-                                            <label class="black-text" for="primeiroMesAB">Primeiro mês</label>
-                                        </p>
-                                    </div>
-                                    <div class="col">
-                                        <p>
-                                            <input type="checkbox" id="segundoMesAB" />
-                                            <label class="black-text" for="segundoMesAB">Segundo mês</label>
-                                        </p>
-                                    </div>
-                                    <div class="col">
-                                        <p>
-                                            <input type="checkbox" id="terceiroMesAB" />
-                                            <label class="black-text" for="terceiroMesAB">Terceiro mês</label>
-                                        </p>
-                                    </div>
-                                    <div class="col">
-                                        <p>
-                                            <input type="checkbox" id="quartoMesAB" />
-                                            <label class="black-text" for="quartoMesAB">Quarto mês</label>
-                                        </p>
-                                    </div>
-                                    <div class="col">
-                                        <p>
-                                            <input type="checkbox" id="QuintoMesAB" />
-                                            <label class="black-text" for="QuintoMesAB">Quinto mês    </label>
-                                        </p>
-                                    </div>
-                                    <div class="col">
-                                        <p>
-                                            <input type="checkbox" id="naoSeiMesAB" />
-                                            <label class="black-text" for="naoSeiMesAB">Não sei</label>
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="input-field col s3">
+                                <input id="qtdCesaria" type="number" class="validate">
+                                <label class="black-text" for="qtdCesaria">Cesaria</label>
                             </div>
-                            <div class="row listaDoencaAgudaCronica">
-
-                                <div class="col s4">
-                                    <p>
-                                        <input type="checkbox" id="doencasAgCro" />
-                                        <label class="black-text" for="doencasAgCro">Doenças Agudas ou crônicas</label>
-                                    </p>
-                                </div>
-                                <div class="input-field col s6 inputDoencaAgudaCronica" >
-                                    <input id="dsDoencaAgCro" type="text" class="validate">
-                                    <label class="black-text" for="dsDoencaAgCro">Nome Doença Aguda ou Crônica</label>                                   
-                                </div>
-                                <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addNomeDoencaAgudaCronica();">
-                                    <i class="material-icons">add</i>
-                                </a>
+                            <div class="input-field col s3">
+                                <input id="abortoEspontaneo" type="number" class="validate">
+                                <label class="black-text" for="abortoEspontaneo">Aborto espontaneo</label>
                             </div>
-                            <div class="row">
 
-                                <div class="col s4">
-                                    <p>
-                                        <input type="checkbox" id="usoMedicamento" />
-                                        <label class="black-text" for="usoMedicamento">Fez uso de Medicamento durante a gestação?</label>
-                                    </p>
-                                </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s3">
+                                <input id="abortoProvocado" type="number" class="validate">
+                                <label class="black-text" for="abortoProvocado">Aborto provocado</label>
+                            </div>
+
+                            <div class="input-field col s3">
+                                <input id="gestaEctopica" type="number" class="validate">
+                                <label class="black-text" for="gestaEctopica">Gestação Ectopica</label>
+                            </div>
+                            <div class="col s3">
+                                <p>
+                                    <input type="checkbox" id="preNatal" />
+                                    <label class="black-text" for="preNatal">Realizou Pré Natal?</label>
+                                </p>
+                            </div>
+                            <div class="col s3">
+                                <p>
+                                    <input type="checkbox" id="examesPreNatal" />
+                                    <label class="black-text" for="examesPreNatal">Fez Exames Pré Natal?</label>
+                                </p>
                             </div>
 
 
+                        </div>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <input type="checkbox" id="ameacaAborto" />
+                                    <label class="black-text" for="ameacaAborto">Teve Ameaças de Aborto?</label>
+                                </p>
+                            </div>
+                            <div class="input-field col s4">
+                                <input id="numeroAmeacasAborto" type="number" class="validate">
+                                <label class="black-text" for="numeroAmeacasAborto">Numero de ameaças de aborto</label>
+                            </div> 
+                            <div class="col s5">
+                                <div class="col">
+                                    <p>
+                                        <input type="checkbox" id="primeiroMesAB" />
+                                        <label class="black-text" for="primeiroMesAB">Primeiro mês</label>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <input type="checkbox" id="segundoMesAB" />
+                                        <label class="black-text" for="segundoMesAB">Segundo mês</label>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <input type="checkbox" id="terceiroMesAB" />
+                                        <label class="black-text" for="terceiroMesAB">Terceiro mês</label>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <input type="checkbox" id="quartoMesAB" />
+                                        <label class="black-text" for="quartoMesAB">Quarto mês</label>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <input type="checkbox" id="QuintoMesAB" />
+                                        <label class="black-text" for="QuintoMesAB">Quinto mês    </label>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <input type="checkbox" id="naoSeiMesAB" />
+                                        <label class="black-text" for="naoSeiMesAB">Não sei</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row listaDoencaAgudaCronica">
 
-                            <div class="row">
-                                <div class="listaMedicamento " style="display: none;">
-                                    <div class="medicamento">
-                                        <div class="row  teal lighten-4">
-                                            <div class="input-field col s5">
-                                                <i class="material-icons prefix">textsms</i>
-                                                <input type="text" id="autocomplete-input" class="autocomplete">
-                                                <label class="black-text" for="autocomplete-input">Nome do medicamento</label>
+                            <div class="col s4">
+                                <p>
+                                    <input type="checkbox" id="doencasAgCro" />
+                                    <label class="black-text" for="doencasAgCro">Doenças Agudas ou crônicas</label>
+                                </p>
+                            </div>
+                            <div class="input-field col s6 inputDoencaAgudaCronica" >
+                                <input id="dsDoencaAgCro" type="text" class="validate">
+                                <label class="black-text" for="dsDoencaAgCro">Nome Doença Aguda ou Crônica</label>                                   
+                            </div>
+                            <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addNomeDoencaAgudaCronica();">
+                                <i class="material-icons">add</i>
+                            </a>
+                        </div>
+                        <div class="row">
 
-                                            </div>
+                            <div class="col s4">
+                                <p>
+                                    <input type="checkbox" id="usoMedicamento" />
+                                    <label class="black-text" for="usoMedicamento">Fez uso de Medicamento durante a gestação?</label>
+                                </p>
+                            </div>
+                        </div>
 
-                                            <div class="input-field col s5" >
-                                                <input id="medicamentoDescricao" type="text" class="validate">
-                                                <label class="black-text" for="medicamentoDescricao">Forma de uso e posologia</label>                                   
-                                            </div>
 
-                                            <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addMedicamento();">
-                                                <i class="material-icons">add</i>
-                                            </a>
+
+                        <div class="row">
+                            <div class="listaMedicamento " style="display: none;">
+                                <div class="medicamento">
+                                    <div class="row  teal lighten-4">
+                                        <div class="input-field col s5">
+                                            <i class="material-icons prefix">textsms</i>
+                                            <input type="text" id="autocomplete-input" class="autocomplete">
+                                            <label class="black-text" for="autocomplete-input">Nome do medicamento</label>
+
                                         </div>
 
-                                        <div class="row mesesUsoMedicamento  teal lighten-4" style="display: none;">
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="primeiroMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="primeiroMesMedicamentoGestacaoUso">Primeiro mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="segundoMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="segundoMesMedicamentoGestacaoUso">Segundo mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="terceiroMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="terceiroMesMedicamentoGestacaoUso">Terceiro mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="quartoMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="quartoMesMedicamentoGestacaoUso">Quarto mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="quintoMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="quintoMesMedicamentoGestacaoUso">Quinto mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="sextoMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="sextoMesMedicamentoGestacaoUso">Sexto mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="setimoMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="setimoMesMedicamentoGestacaoUso">Sétimo mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="oitavoMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="oitavoMesMedicamentoGestacaoUso">Oitavo mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="nonoMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="nonoMesMedicamentoGestacaoUso">Nono mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="naoSeiMesMedicamentoGestacaoUso" />
-                                                    <label class="black-text" for="naoSeiMesMedicamentoGestacaoUso">Não sei</label>
-                                                </p>
-                                            </div>
+                                        <div class="input-field col s5" >
+                                            <input id="medicamentoDescricao" type="text" class="validate">
+                                            <label class="black-text" for="medicamentoDescricao">Forma de uso e posologia</label>                                   
                                         </div>
+
+                                        <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addMedicamento();">
+                                            <i class="material-icons">add</i>
+                                        </a>
                                     </div>
-                                </div>
-                            </div>
 
-
-                            <div class="row">
-                                <div class="col s12">
-                                    <p>
-                                        <input type="checkbox" id="usoDrogasIlicitas" />
-                                        <label class="black-text" for="usoDrogasIlicitas">Uso de Drogas Ilícitas</label>
-                                    </p>
-                                </div> 
-                            </div>
-                            <div class="row">
-                                <div class="listaDroga" style="display: none;">
-                                    <div class="droga">
-                                        <div class="row  teal lighten-4">
-                                            <div class="input-field col s5">
-                                                <i class="material-icons prefix">textsms</i>
-                                                <input type="text" id="autocomplete-input" class="autocomplete">
-                                                <label class="black-text" for="autocomplete-input">Nome da droga</label>
-
-                                            </div>
-
-                                            <div class="input-field col s5" >
-                                                <input id="drogaDescricao" type="text" class="validate">
-                                                <label class="black-text" for="drogaDescricao">Forma de uso e quantidade</label>                                   
-                                            </div>
-
-                                            <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addDroga();">
-                                                <i class="material-icons">add</i>
-                                            </a>
+                                    <div class="row mesesUsoMedicamento  teal lighten-4" style="display: none;">
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="primeiroMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="primeiroMesMedicamentoGestacaoUso">Primeiro mês</label>
+                                            </p>
                                         </div>
-                                        <div class="row mesesUsoDroga  teal lighten-4" style="display: none;">
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="primeiroMesDrogaUso" />
-                                                    <label class="black-text" for="primeiroMesDrogaUso">Primeiro mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="segundoMesDrogaUso" />
-                                                    <label class="black-text" for="segundoMesDrogaUso">Segundo mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="terceiroMesDrogaUso" />
-                                                    <label class="black-text" for="terceiroMesDrogaUso">Terceiro mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="quartoMesDrogaUso" />
-                                                    <label class="black-text" for="quartoMesDrogaUso">Quarto mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="quintoMesDrogaUso" />
-                                                    <label class="black-text" for="quintoMesDrogaUso">Quinto mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="sextoMesDrogaUso" />
-                                                    <label class="black-text" for="sextoMesDrogaUso">Sexto mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="setimoMesDrogaUso" />
-                                                    <label class="black-text" for="setimoMesDrogaUso">Sétimo mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="oitavoMesDrogaUso" />
-                                                    <label class="black-text" for="oitavoMesDrogaUso">Oitavo mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="nonoMesDrogaUso" />
-                                                    <label class="black-text" for="nonoMesDrogaUso">Nono mês</label>
-                                                </p>
-                                            </div>
-                                            <div class="col s2">
-                                                <p>
-                                                    <input type="checkbox" id="naoSeiMesDrogaUso" />
-                                                    <label class="black-text" for="naoSeiMesDrogaUso">Não sei</label>
-                                                </p>
-                                            </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="segundoMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="segundoMesMedicamentoGestacaoUso">Segundo mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="terceiroMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="terceiroMesMedicamentoGestacaoUso">Terceiro mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="quartoMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="quartoMesMedicamentoGestacaoUso">Quarto mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="quintoMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="quintoMesMedicamentoGestacaoUso">Quinto mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="sextoMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="sextoMesMedicamentoGestacaoUso">Sexto mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="setimoMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="setimoMesMedicamentoGestacaoUso">Sétimo mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="oitavoMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="oitavoMesMedicamentoGestacaoUso">Oitavo mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="nonoMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="nonoMesMedicamentoGestacaoUso">Nono mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="naoSeiMesMedicamentoGestacaoUso" />
+                                                <label class="black-text" for="naoSeiMesMedicamentoGestacaoUso">Não sei</label>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="col s12">
+                                <p>
+                                    <input type="checkbox" id="usoDrogasIlicitas" />
+                                    <label class="black-text" for="usoDrogasIlicitas">Uso de Drogas Ilícitas</label>
+                                </p>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="listaDroga" style="display: none;">
+                                <div class="droga">
+                                    <div class="row  teal lighten-4">
+                                        <div class="input-field col s5">
+                                            <i class="material-icons prefix">textsms</i>
+                                            <input type="text" id="autocomplete-input" class="autocomplete">
+                                            <label class="black-text" for="autocomplete-input">Nome da droga</label>
+
+                                        </div>
+
+                                        <div class="input-field col s5" >
+                                            <input id="drogaDescricao" type="text" class="validate">
+                                            <label class="black-text" for="drogaDescricao">Forma de uso e quantidade</label>                                   
+                                        </div>
+
+                                        <a class="btn-floating btn-flat waves-effect waves-light teal right-align" onclick="addDroga();">
+                                            <i class="material-icons">add</i>
+                                        </a>
+                                    </div>
+                                    <div class="row mesesUsoDroga  teal lighten-4" style="display: none;">
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="primeiroMesDrogaUso" />
+                                                <label class="black-text" for="primeiroMesDrogaUso">Primeiro mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="segundoMesDrogaUso" />
+                                                <label class="black-text" for="segundoMesDrogaUso">Segundo mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="terceiroMesDrogaUso" />
+                                                <label class="black-text" for="terceiroMesDrogaUso">Terceiro mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="quartoMesDrogaUso" />
+                                                <label class="black-text" for="quartoMesDrogaUso">Quarto mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="quintoMesDrogaUso" />
+                                                <label class="black-text" for="quintoMesDrogaUso">Quinto mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="sextoMesDrogaUso" />
+                                                <label class="black-text" for="sextoMesDrogaUso">Sexto mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="setimoMesDrogaUso" />
+                                                <label class="black-text" for="setimoMesDrogaUso">Sétimo mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="oitavoMesDrogaUso" />
+                                                <label class="black-text" for="oitavoMesDrogaUso">Oitavo mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="nonoMesDrogaUso" />
+                                                <label class="black-text" for="nonoMesDrogaUso">Nono mês</label>
+                                            </p>
+                                        </div>
+                                        <div class="col s2">
+                                            <p>
+                                                <input type="checkbox" id="naoSeiMesDrogaUso" />
+                                                <label class="black-text" for="naoSeiMesDrogaUso">Não sei</label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
                         <div class="row">
                             <div class="col s2">
                                 <p>
@@ -391,6 +389,7 @@
                             </div>
 
                         </div>
+                        <div class="divider"></div>
                         <div class="row">
                             <div class="col s4">
                                 <p>
@@ -450,7 +449,7 @@
                                 </div>
                                 <div class="input-field col s12 dsAlteracaoEcoObstetrica" style="display: none" >
 
-                                   <textarea  id="ecoObstetricaDsAlterado" class="materialize-textarea"></textarea>
+                                    <textarea  id="ecoObstetricaDsAlterado" class="materialize-textarea"></textarea>
                                     <label class="black-text" for="ecoObstetricaDsAlterado">Descricao da alteracao</label>
 
                                 </div>
@@ -568,7 +567,7 @@
                                 </div>
                             </div>
                         </div>  
-
+                        <div class="divider"></div>
                         <div class="row">
                             <div class="col s12">
                                 <p> Local do parto: </p>
@@ -584,6 +583,7 @@
                                 <label for="outroEstado" class="black-text">Hospital de Outro Estado</label>
                             </div>
                         </div>
+                        <div class="divider"></div>
                         <div class="row">
                             <div class="col s7">
                                 <p> Duração da gestação: </p>
@@ -606,6 +606,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="divider"></div>
                         <div class="row">
                             <div class="col s3">
                                 <p> Apresentação: </p>
@@ -663,55 +664,55 @@
                                 </p>
                             </div>
                         </div>
-
+                        <div class="divider"></div>
                         <div class="row">
-                            <div class="col s12">
-                                <div class="col s2">
-                                    <p>
-                                        <input type="checkbox" id="testePezinho" />
-                                        <label class="black-text" for="testePezinho">Teste do pezinho</label>
-                                    </p>
-                                </div>
 
-                                <div class="col s2 alteracaoTestePezinho" style="display: none">
-                                    <p>
-                                        <input type="checkbox" id="alteracaoTestePezinhoCheck">
-                                        <label class="black-text" for="alteracaoTestePezinhoCheck">Alterado</label>
-                                    </p>
-                                </div>
-                                <div class="input-field col s8 dsAlteracaoTestePezinho" style="display: none">
-
-                                    <input type="text" id="DescAlteracaoTesteDoPezinho" class="validate">
-                                    <label class="black-text" for="DescAlteracaoTesteDoPezinho">Descrição da alteração do teste do pezinho</label>
-
-                                </div>
+                            <div class="col s2">
+                                <p>
+                                    <input type="checkbox" id="testePezinho" />
+                                    <label class="black-text" for="testePezinho">Teste do pezinho</label>
+                                </p>
                             </div>
-                        </div>
 
+                            <div class="col s2 alteracaoTestePezinho" style="display: none">
+                                <p>
+                                    <input type="checkbox" id="alteracaoTestePezinhoCheck">
+                                    <label class="black-text" for="alteracaoTestePezinhoCheck">Alterado</label>
+                                </p>
+                            </div>
+                            <div class="input-field col s8 dsAlteracaoTestePezinho" style="display: none">
+
+                                <input type="text" id="DescAlteracaoTesteDoPezinho" class="validate">
+                                <label class="black-text" for="DescAlteracaoTesteDoPezinho">Descrição da alteração do teste do pezinho</label>
+
+                            </div>
+
+                        </div>
+                        <div class="divider"></div>
                         <div class="row">
-                            <div class="col s12">
-                                <div class="col s2">
-                                    <p>
-                                        <input type="checkbox" id="testeOrelhinha" />
-                                        <label class="black-text" for="testeOrelhinha">Teste da orelhinha</label>
-                                    </p>
-                                </div>
 
-                                <div class="col s2 alteracaoTesteOrelhinha" style="display: none">
-                                    <p>
-                                        <input type="checkbox" id="alteracaoTesteOrelhinhaCheck">
-                                        <label class="black-text" for="alteracaoTesteOrelhinhaCheck">Alterado</label>
-                                    </p>
-                                </div>
-                                <div class="input-field col s8 dsAlteracaoTesteOrelhinha" style="display: none">
-
-                                    <input type="text" id="DescAlteracaoTesteOrelhinha" class="validate">
-                                    <label class="black-text" for="DescAlteracaoTesteOrelhinha">Descrição da alteração do teste da orelhinha</label>
-
-                                </div>
+                            <div class="col s2">
+                                <p>
+                                    <input type="checkbox" id="testeOrelhinha" />
+                                    <label class="black-text" for="testeOrelhinha">Teste da orelhinha</label>
+                                </p>
                             </div>
-                        </div>
 
+                            <div class="col s2 alteracaoTesteOrelhinha" style="display: none">
+                                <p>
+                                    <input type="checkbox" id="alteracaoTesteOrelhinhaCheck">
+                                    <label class="black-text" for="alteracaoTesteOrelhinhaCheck">Alterado</label>
+                                </p>
+                            </div>
+                            <div class="input-field col s8 dsAlteracaoTesteOrelhinha" style="display: none">
+
+                                <input type="text" id="DescAlteracaoTesteOrelhinha" class="validate">
+                                <label class="black-text" for="DescAlteracaoTesteOrelhinha">Descrição da alteração do teste da orelhinha</label>
+
+                            </div>
+
+                        </div>
+                        <div class="divider"></div>
                         <div class="row">
 
                             <div class="col s3">
@@ -734,6 +735,8 @@
                                     <i class="material-icons right">send</i></button>
                             </div>
                         </div>
+
+
                     </form>
 
 

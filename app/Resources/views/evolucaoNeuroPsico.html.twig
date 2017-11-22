@@ -39,7 +39,7 @@
                         <li class="tab"><a target="_self" href="{{web_dir}}identificacao">Identificação</a></li>
                         <li class="tab"><a target="_self" href="{{web_dir}}historiaGestaNeo">Historia Gestacional e Neonatal</a></li>
                         <li class="tab"><a class="active"  href="#">Evolução Neuropsicomotora</a></li>
-                        <li class="tab"><a href="#test4">História Familiar</a></li>
+                        <li class="tab"><a target="_self" href="{{web_dir}}historiafamiliar">História Familiar</a></li>
                     </ul>
                 </div>
             </nav>
@@ -49,9 +49,11 @@
                 <div class="z-depth-1 grey lighten-4 row" >
 
                     <form class="col s12">
-                        <div class="row">
+                       
                             <div class="row">
-
+                                <blockquote>
+                                    Dados em meses
+                                </blockquote>
                                 <div class="input-field col s3">
 
                                     <input id="sorrisoSocial" type="number" class="validate">
@@ -94,7 +96,10 @@
                                     <input id="controleEsfincteriano" type="number" class="validate">
                                     <label class="black-text" for="controleEsfincteriano">Controle Esfincteriano</label>
                                 </div>
+
                             </div>
+                        
+                          <div class="divider"></div>
                             <div class="row">
                                 <div class="col s4">
                                     <p>
@@ -114,6 +119,19 @@
                                         </optgroup>
                                     </select>
                                     <label>Série atual</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">
+                                    <p>
+                                        <input type="checkbox" id="repetencias" />
+                                        <label class="black-text" for="repetencias">Repetências?</label>
+                                    </p>
+                                </div>
+
+                                <div class="input-field col s6 divQtdRepetencias" style="display: none">
+                                    <input id="qtdRepetencias" type="number" class="validate">
+                                    <label class="black-text" for="qtdRepetencias">Numero de repetências</label>
                                 </div>
                             </div>
 
@@ -142,18 +160,27 @@
     <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
     <script type="text/javascript" src="../assets/js/identificacao.js"></script>
     <script type='text/javascript'>
- $(document).on('change', '#entrouEscola', function () {
+        $(document).on('change', '#entrouEscola', function () {
             if (this.checked) {
                 $('.opcaoEscolaridade').show();
             } else {
                 $('.opcaoEscolaridade').hide();
             }
         });
-        
-        $(document).ready(function() {
-    $('select').material_select();
-  });
-        
+
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+
+        $(document).on('change', '#repetencias', function () {
+            if (this.checked) {
+                $('.divQtdRepetencias').show();
+            } else {
+                $('.divQtdRepetencias').hide();
+            }
+        });
+
+
     </script>
 </body>
 
