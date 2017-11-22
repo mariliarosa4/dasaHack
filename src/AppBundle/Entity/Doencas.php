@@ -3,9 +3,9 @@
 namespace AppBundle\Entity;
 
 /**
- * Doenã§as
+ * Doenï¿½as
  */
-class Doenã§as
+class Doencas
 {
     /**
      * @var integer
@@ -38,7 +38,7 @@ class Doenã§as
      *
      * @param string $nomedoencaagudaoucronica
      *
-     * @return Doenã§as
+     * @return Doenï¿½as
      */
     public function setNomedoencaagudaoucronica($nomedoencaagudaoucronica)
     {
@@ -62,7 +62,7 @@ class Doenã§as
      *
      * @param \AppBundle\Entity\Historicogestacaoneonatal $codigohistorico
      *
-     * @return Doenã§as
+     * @return Doenï¿½as
      */
     public function setCodigohistorico(\AppBundle\Entity\Historicogestacaoneonatal $codigohistorico = null)
     {
