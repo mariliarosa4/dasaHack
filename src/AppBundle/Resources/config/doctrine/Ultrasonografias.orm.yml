@@ -1,0 +1,156 @@
+AppBundle\Entity\Ultrasonografias:
+    type: entity
+    table: ultrasonografias
+    indexes:
+        codigoHistorico:
+            columns:
+                - codigoHistorico
+    id:
+        codigoultrassonografias:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: codigoUltrassonografias
+            generator:
+                strategy: IDENTITY
+    fields:
+        rastreioprimeirotrimestredsalterado:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: rastreioPrimeiroTrimestreDsAlterado
+        rastreioprimeirotrimestrequantidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: rastreioPrimeiroTrimestreQuantidade
+        rastreioprimeirotrimestre:
+            type: boolean
+            nullable: true
+            column: rastreioPrimeiroTrimestre
+        rastreioprimeirotrimestrealterado:
+            type: boolean
+            nullable: true
+            column: rastreioPrimeiroTrimestreAlterado
+        ecoobstetricaalterado:
+            type: boolean
+            nullable: true
+            column: ecoObstetricaAlterado
+        ecoobstetricatrimestre:
+            type: boolean
+            nullable: true
+            column: ecoObstetricaTrimestre
+        ecoobstetricaquantidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ecoObstetricaQuantidade
+        ecoobstetricadsalterado:
+            type: boolean
+            nullable: true
+            column: ecoObstetricaDsAlterado
+        ecomorfologicadsalterado:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ecoMorfologicaDsAlterado
+        ecomorfologicatrimestre:
+            type: boolean
+            nullable: true
+            column: ecoMorfologicaTrimestre
+        ecomorfologicaalterado:
+            type: boolean
+            nullable: true
+            column: ecoMorfologicaAlterado
+        ecomorfologicaquantidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ecoMorfologicaQuantidade
+        ecocardiofetaldsalterado:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ecocardioFetalDsAlterado
+        ecocardiofetaltrimestre:
+            type: boolean
+            nullable: true
+            column: ecocardioFetalTrimestre
+        ecocardiofetalalterado:
+            type: boolean
+            nullable: true
+            column: ecocardioFetalAlterado
+        ecocardiofetalquantidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ecocardioFetalQuantidade
+        resmagfetalalterado:
+            type: boolean
+            nullable: true
+            column: resMagFetalAlterado
+        resmagfetaltrimestre:
+            type: boolean
+            nullable: true
+            column: resMagFetalTrimestre
+        resmagfetaldsalterado:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: resMagFetalDsAlterado
+        resmagfetalquantidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: resMagFetalQuantidade
+        ecotridimensionalalterado:
+            type: boolean
+            nullable: true
+            column: ecoTridimensionalAlterado
+        ecotridimensionaldsalterado:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ecoTridimensionalDsAlterado
+        ecotridimensionalquantidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ecoTridimensionalQuantidade
+        ecotridimensionaltrimestre:
+            type: boolean
+            nullable: true
+            column: ecoTridimensionalTrimestre
+        ultrasonografias:
+            type: boolean
+            nullable: true
+    manyToOne:
+        codigohistorico:
+            targetEntity: Historicogestacaoneonatal
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                codigoHistorico:
+                    referencedColumnName: codigoHistorico
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

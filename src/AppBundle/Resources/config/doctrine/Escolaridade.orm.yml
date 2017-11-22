@@ -1,0 +1,22 @@
+AppBundle\Entity\Escolaridade:
+    type: entity
+    table: escolaridade
+    id:
+        codigoescolaridade:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: codigoEscolaridade
+            generator:
+                strategy: IDENTITY
+    fields:
+        dsescolaridade:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: dsEscolaridade
+    lifecycleCallbacks: {  }

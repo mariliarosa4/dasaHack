@@ -1,0 +1,246 @@
+AppBundle\Entity\Historicogestacaoneonatal:
+    type: entity
+    table: historicogestacaoneonatal
+    indexes:
+        codigoIdentificacao:
+            columns:
+                - codigoIdentificacao
+    id:
+        codigohistorico:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: codigoHistorico
+            generator:
+                strategy: IDENTITY
+    fields:
+        ultrasonografias:
+            type: boolean
+            nullable: true
+        prenatal:
+            type: boolean
+            nullable: true
+            column: preNatal
+        ameacaaborto:
+            type: boolean
+            nullable: true
+            column: ameacaAborto
+        fumo:
+            type: boolean
+            nullable: true
+        localdoparto:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: localDoParto
+        tipodeparto:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: tipoDeParto
+        apresentacao:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        doencasagudasoucronicas:
+            type: boolean
+            nullable: true
+            column: doencasAgudasOuCronicas
+        usodrogasilicitas:
+            type: boolean
+            nullable: true
+            column: usoDrogasIlicitas
+        moticocesaria:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: moticoCesaria
+        descricaoalcool:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: descricaoAlcool
+        duracaogestacao:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: duracaoGestacao
+        descricaofumo:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: descricaoFumo
+        alcool:
+            type: boolean
+            nullable: true
+        primeiromesameacaaborto:
+            type: boolean
+            nullable: true
+            column: primeiroMesAmeacaAborto
+        segundomesameacaaborto:
+            type: boolean
+            nullable: true
+            column: segundoMesAmeacaAborto
+        terceiromesameacaaborto:
+            type: boolean
+            nullable: true
+            column: terceiroMesAmeacaAborto
+        quartomesameacaaborto:
+            type: boolean
+            nullable: true
+            column: quartoMesAmeacaAborto
+        quintomesameacaaborto:
+            type: boolean
+            nullable: true
+            column: quintoMesAmeacaAborto
+        naoseimesameacaaborto:
+            type: boolean
+            nullable: true
+            column: naoSeiMesAmeacaAborto
+        exameprenatal:
+            type: boolean
+            nullable: true
+            column: examePreNatal
+        numeroameacasaborto:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: numeroAmeacasAborto
+        pt:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 2
+        apgar1:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 2
+        apgar5:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 2
+        permanenciamaternidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: permanenciaMaternidade
+        testedaorelhinha:
+            type: boolean
+            nullable: true
+            column: testeDaOrelhinha
+        pc:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 2
+        testedopezinho:
+            type: boolean
+            nullable: true
+            column: testeDoPezinho
+        peso:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 2
+        comprimento:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 2
+        alteracaotestedopezinho:
+            type: boolean
+            nullable: true
+            column: alteracaoTesteDoPezinho
+        alteracaotestedaorelhinha:
+            type: boolean
+            nullable: true
+            column: alteracaoTesteDaOrelhinha
+        descalteracaotestedopezinho:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: descAlteracaoTesteDoPezinho
+        descalteracaotestedaorelhinha:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: descAlteracaoTesteDaOrelhinha
+        intercorrenciaevolucaoprimeirosmeses:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: intercorrenciaEvolucaoPrimeirosMeses
+        intercorrencias:
+            type: boolean
+            nullable: true
+        gesta:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        gestacaoectopica:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: gestacaoEctopica
+        para:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        cesaria:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        abortoespontaneo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: abortoEspontaneo
+        abortoprovocado:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: abortoProvocado
+    manyToOne:
+        codigoidentificacao:
+            targetEntity: Identificacao
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                codigoIdentificacao:
+                    referencedColumnName: codigoIdentificacao
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

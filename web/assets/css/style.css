@@ -2,12 +2,15 @@ html{
     background-image: url('../img/2.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+ z-index: 1;
+    background-color: hsla(0,0%,100%,0.30);
+    background-blend-mode: overlay;
+
 }
 body {
     height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, .3);
+   
 }
 
 

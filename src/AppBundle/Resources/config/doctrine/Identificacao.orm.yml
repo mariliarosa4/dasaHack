@@ -1,0 +1,62 @@
+AppBundle\Entity\Identificacao:
+    type: entity
+    table: identificacao
+    id:
+        codigoidentificacao:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: codigoIdentificacao
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomesobrenome:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: nomeSobrenome
+        sexo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+        datadenascimento:
+            type: date
+            nullable: true
+            column: dataDeNascimento
+        motivodaconsulta:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: motivoDaConsulta
+        endereco:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        localdeatendimento:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: localDeAtendimento
+        datadeatendimento:
+            type: date
+            nullable: true
+            column: dataDeAtendimento
+        etnia:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

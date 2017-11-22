@@ -1,0 +1,54 @@
+AppBundle\Entity\Historicoirmaos:
+    type: entity
+    table: historicoirmaos
+    indexes:
+        codigoIdentificacao:
+            columns:
+                - codigoIdentificacao
+    id:
+        codigodadosescolares:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: codigoDadosEscolares
+            generator:
+                strategy: IDENTITY
+    fields:
+        irmaosaudavel:
+            type: boolean
+            nullable: true
+            column: irmaoSaudavel
+        irmaosexo:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: true
+            column: irmaoSexo
+        irmaoidade:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: irmaoIdade
+        irmaoparentesco:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: irmaoParentesco
+    manyToOne:
+        codigoidentificacao:
+            targetEntity: Identificacao
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                codigoIdentificacao:
+                    referencedColumnName: codigoIdentificacao
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

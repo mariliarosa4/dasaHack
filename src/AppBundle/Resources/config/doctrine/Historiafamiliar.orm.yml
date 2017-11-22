@@ -1,0 +1,134 @@
+AppBundle\Entity\Historiafamiliar:
+    type: entity
+    table: historiafamiliar
+    indexes:
+        codigoIdentificacao:
+            columns:
+                - codigoIdentificacao
+        codigoEscolaridadeMae:
+            columns:
+                - codigoEscolaridadeMae
+        codigoEscolaridadePai:
+            columns:
+                - codigoEscolaridadePai
+    id:
+        codigohistoriafamiliar:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: codigoHistoriaFamiliar
+            generator:
+                strategy: IDENTITY
+    fields:
+        paiescolaridade:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: paiEscolaridade
+        maeescolaridade:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: maeEscolaridade
+        idadematerna:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: idadeMaterna
+        idadepaterna:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: idadePaterna
+        cosanguinidade:
+            type: boolean
+            nullable: true
+        graucosanguinidade:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: grauCosanguinidade
+        descricaocosanguinidade:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: descricaoCosanguinidade
+        maeocupacao:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: maeOcupacao
+        paiocupacao:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: paiOcupacao
+        quantidadeirmaos:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: quantidadeIrmaos
+        recorrenciafamiliar:
+            type: boolean
+            nullable: true
+            column: recorrenciaFamiliar
+        recorrenciafamiliargenetica:
+            type: boolean
+            nullable: true
+            column: recorrenciaFamiliarGenetica
+        descricaorecorrenciafamiliargenetica:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: descricaoRecorrenciaFamiliarGenetica
+    manyToOne:
+        codigoidentificacao:
+            targetEntity: Identificacao
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                codigoIdentificacao:
+                    referencedColumnName: codigoIdentificacao
+            orphanRemoval: false
+        codigoescolaridademae:
+            targetEntity: Escolaridade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                codigoEscolaridadeMae:
+                    referencedColumnName: codigoEscolaridade
+            orphanRemoval: false
+        codigoescolaridadepai:
+            targetEntity: Escolaridade
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                codigoEscolaridadePai:
+                    referencedColumnName: codigoEscolaridade
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

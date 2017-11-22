@@ -1,0 +1,37 @@
+!!binary QXBwQnVuZGxlXEVudGl0eVxEb2Vu46dhcw==:
+    type: entity
+    table: doenças
+    indexes:
+        codigoHistorico:
+            columns:
+                - codigoHistorico
+    id:
+        codigodoenca:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: codigoDoenca
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomedoencaagudaoucronica:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: nomeDoencaAgudaOuCronica
+    manyToOne:
+        codigohistorico:
+            targetEntity: Historicogestacaoneonatal
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                codigoHistorico:
+                    referencedColumnName: codigoHistorico
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

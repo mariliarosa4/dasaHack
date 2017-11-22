@@ -1,0 +1,22 @@
+AppBundle\Entity\Medicamentos:
+    type: entity
+    table: medicamentos
+    id:
+        codigomedicamento:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: codigoMedicamento
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomemedicamento:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: nomeMedicamento
+    lifecycleCallbacks: {  }
