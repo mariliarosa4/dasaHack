@@ -40,6 +40,8 @@
                         <li class="tab"><a target="_self" href="{{web_dir}}historiaGestaNeo">Historia Gestacional e Neonatal</a></li>
                         <li class="tab"><a target="_self" href="{{web_dir}}neuropsico">Evolução Neuropsicomotora</a></li>
                         <li class="tab"><a class="active" target="_self" href="#">História Familiar</a></li>
+                        <li class="tab"><a target="_self" href="{{web_dir}}exameFisico">Exame Físico</a></li>
+                        <li class="tab"><a target="_self" href="{{web_dir}}exames">Exames</a></li>
                     </ul>
                 </div>
             </nav>
@@ -138,7 +140,7 @@
                                 <label class="black-text" for="qtdIrmaos" >Quantidade de irmãos</label>
                             </div>
                             <a class="waves-effect waves-light btn" onclick="addIrmao();">
-                               Adicionar Irmão
+                                Adicionar Irmão
                             </a>
                         </div>
                         <div class="listaIrmaos">
@@ -179,7 +181,25 @@
                             </div>
 
                         </div>
+                        <div class="row">
+                            <div class="col s2">
+                                <p>
+                                    <input type="checkbox" id="recorrenciaFamiliar" />
+                                    <label class="black-text" for="recorrenciaFamiliar">Recorrência Familiar</label>
+                                </p>
+                            </div>
+                            <div class="col s2">
+                                <p>
+                                    <input type="checkbox" id="recorrenciaFamiliarGenetica" />
+                                    <label class="black-text" for="recorrenciaFamiliarGenetica">Recorrência Familiar Genética</label>
+                                </p>
+                            </div>
+                            <div class="input-field col s8" id="descricaoRecorrenciaFamiliarGenetica" style="display: none">
+                                <input id="dsRecorrenciaFamiliarGenetica" type="text" class="validate">
+                                <label class="black-text" for="dsRecorrenciaFamiliarGenetica" >Descrição da Recorrência familiar Genética</label>
+                            </div>
 
+                        </div>
                         <div class='row'>
                             <div class="col s4 offset-s4">
 
@@ -216,6 +236,14 @@
         $(document).ready(function () {
             $('select').material_select();
         });
+        $(document).on('change', '#recorrenciaFamiliarGenetica', function () {
+            if (this.checked) {
+                $('#descricaoRecorrenciaFamiliarGenetica').show();
+            } else {
+                $('#descricaoRecorrenciaFamiliarGenetica').hide();
+            }
+        });
+
         function addIrmao() {
             var inputLocal = document.getElementsByClassName("irmaos")[0];
             var clone = inputLocal.cloneNode(true);
