@@ -38,7 +38,8 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     globals:
-        web_dir: "/atendimentogenetica/app_dev.php/"
+        web_dir: "/dasaHack/"
+        link_dir: "/dasaHack/app_dev.php/"
 
 # Doctrine Configuration
 doctrine:

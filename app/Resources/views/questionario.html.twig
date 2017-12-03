@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <title>Formulário Qualidade Imagem</title>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=1024, initial-scale=1">
+
+        <link type="text/css" rel="stylesheet" href="{{web_dir}}materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{web_dir}}assets/themes/bars-square.css">
+        <link rel="stylesheet" href="{{web_dir}}assets/css/main.css">
+        <link rel="stylesheet" href="{{web_dir}}assets/css/examples.css">
+        <link rel="stylesheet" href="{{web_dir}}assets/css/normalize.min.css">
+        <!-- Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body>
+        <nav>
+        <div class="nav-wrapper blue ">  <a href="#" class="brand-logo center">Avaliação da qualidade da imagem</a></div>
+       </nav>
+        <div class="container" style="width: 100%">
+            <div class='row'>
+                <form class="form-container" >
+                    <div class="card-panel grey lighten-3" style="height: 600px">
+                        {% set counter = 1 %}
+                        {%for pergunta in perguntas%}
+
+                            <div class="col s6">
+                                <div class="box box-blue box-example-square">
+                                    <div class="box-header" id="{{pergunta.idPergunta}}">{{pergunta.descricaoPergunta}}</div>
+                                    <div class="box-body">
+                                        <select id="example{{counter}}"  class="rating" name="rating[{{pergunta.idPergunta}}]" autocomplete="off" style="display: none;" required>
+
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            {% set counter = counter + 1 %}
+                        {%endfor%}
+
+                    </div>
+
+                    <a class="waves-effect waves-light btn blue" onclick="salvarQuestionario('{{acession}}', '{{link_dir}}');">Salvar</a>
+                </form>
+            </div>
+
+        </div>
+
+
+    </body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="{{web_dir}}assets/js/jquery.barrating.js"></script>
+<script type="text/javascript" src="{{web_dir}}materialize/js/materialize.min.js"></script>
+<script type="text/javascript">
+                    var jsonRespostas = {};
+                    $(function () {
+                        $('#example1').barrating('show', {
+                            theme: 'bars-square',
+                            showValues: true,
+                            showSelectedRating: false,
+                            onSelect: function (value, text, event) {
+                                if (typeof (event) !== 'undefined') {
+                                    // rating was selected by a user
+                                    console.log(event.target);
+                                    jsonRespostas.primeira = value;
+                                    console.log(jsonRespostas);
+                                } else {
+                                    // rating was selected programmatically
+                                    // by calling `set` method
+                                }
+                            }
+                        });
+                        $('#example2').barrating({
+                            theme: 'bars-square',
+                            showValues: true,
+                            showSelectedRating: false,
+                            onSelect: function (value, text, event) {
+                                if (typeof (event) !== 'undefined') {
+                                    // rating was selected by a user
+                                    console.log(event.target);
+                                    jsonRespostas.segunda = value;
+                                    console.log(jsonRespostas);
+                                } else {
+                                    // rating was selected programmatically
+                                    // by calling `set` method
+                                }
+                            }
+
+                        });
+                        $('#example3').barrating({
+                            theme: 'bars-square',
+                            showValues: true,
+                            showSelectedRating: false,
+                            onSelect: function (value, text, event) {
+                                if (typeof (event) !== 'undefined') {
+                                    // rating was selected by a user
+                                    console.log(event.target);
+                                    jsonRespostas.terceira = value;
+                                    console.log(jsonRespostas);
+                                } else {
+                                    // rating was selected programmatically
+                                    // by calling `set` method
+                                }
+                            }
+
+
+                        });
+                        $('#example4').barrating({
+                            theme: 'bars-square',
+                            showValues: true,
+                            showSelectedRating: false,
+                            onSelect: function (value, text, event) {
+                                if (typeof (event) !== 'undefined') {
+                                    // rating was selected by a user
+                                    console.log(event.target);
+                                    jsonRespostas['primeira'] = value;
+                                    console.log(jsonRespostas);
+                                } else {
+                                    // rating was selected programmatically
+                                    // by calling `set` method
+                                }
+                            }
+
+
+                        });
+                        $('#example5').barrating({
+                            theme: 'bars-square',
+                            showValues: true,
+                            showSelectedRating: false,
+                            onSelect: function (value, text, event) {
+                                if (typeof (event) !== 'undefined') {
+                                    // rating was selected by a user
+                                    console.log(event.target);
+                                    jsonRespostas.quinta = value;
+                                    console.log(jsonRespostas);
+                                } else {
+                                    // rating was selected programmatically
+                                    // by calling `set` method
+                                }
+                            }
+
+
+                        });
+                    });
+
+
+                    function salvarQuestionario(acession_number, caminho) {
+                        if ($('.form-container')[0].checkValidity()) {
+                            var arraySelected = {};
+                            $("select.rating").each(function (i, sel) {
+                                console.log($("select.rating").attr('name'));
+                                var name = $(sel).attr('name');
+                                var key = name.match(/\[(\d+)\]/)[1];
+                                var selectedVal = $(sel).val();
+
+                                arraySelected[key] = (selectedVal);
+                            });
+                        
+                            console.log(JSON.stringify(arraySelected));
+                            $.ajax({
+                                type: 'post',
+                                data: JSON.stringify(arraySelected),
+                                contentType: 'application/json',
+                                dataType: 'json',
+                                url: '/dasaHack/app_dev.php/salvarQuestionario/'+acession_number+'',
+                                cache: false,
+                                processData: false,
+                                async: false,
+                                success: function (response) {
+                                    console.log(response);
+                                },
+                                error: function (jqXHR, textStatus, errorThrown) {
+                                    console.log(errorThrown);
+                                }
+
+                            });
+                            return false;
+                        } else {
+                            alert("Todas as avaliações devem ser preenchidas.");
+                        }
+                    }
+</script>

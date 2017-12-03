@@ -112,6 +112,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::loginAction',  '_route' => '',);
         }
 
+        // questionario
+        if (0 === strpos($pathinfo, '/questionario') && preg_match('#^/questionario/(?P<acession>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'questionario')), array (  '_controller' => 'AppBundle\\Controller\\QuestionarioController::questionarioAction',));
+        }
+
+        // app_questionario_salvarquestionario
+        if (0 === strpos($pathinfo, '/salvarQuestionario') && preg_match('#^/salvarQuestionario/(?P<acession>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_questionario_salvarquestionario')), array (  '_controller' => 'AppBundle\\Controller\\QuestionarioController::salvarQuestionarioAction',));
+        }
+
         // app_rest_salvardados
         if ('/salvarDados' === $pathinfo) {
             return array (  '_controller' => 'AppBundle\\Controller\\RESTController::salvarDadosAction',  '_route' => 'app_rest_salvardados',);
