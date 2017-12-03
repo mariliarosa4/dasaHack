@@ -15,11 +15,11 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08->enter($__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard.html.twig"));
+        $__internal_7c4199966ffcd073e73154e523ec5a35fa5026162e5d565410af9be20dff666d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7c4199966ffcd073e73154e523ec5a35fa5026162e5d565410af9be20dff666d->enter($__internal_7c4199966ffcd073e73154e523ec5a35fa5026162e5d565410af9be20dff666d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard.html.twig"));
 
-        $__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0->enter($__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard.html.twig"));
+        $__internal_f2abcbc86c6d224ae5eb98c3972e9aa77942ebc9347b04b1178d205231802d49 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f2abcbc86c6d224ae5eb98c3972e9aa77942ebc9347b04b1178d205231802d49->enter($__internal_f2abcbc86c6d224ae5eb98c3972e9aa77942ebc9347b04b1178d205231802d49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard.html.twig"));
 
         // line 1
         echo "<!doctype html>
@@ -70,6 +70,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
 
         Tip 2: you can also add an image using data-image tag
     -->
+   
             <div class=\"logo\">
                 <a href=\"http://www.phoenix-dasa.com\" class=\"simple-text\">
                     Phoenix Dasa
@@ -79,7 +80,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
                 <ul class=\"nav\">
                     <li class=\"active\">
                         <a href=\"";
-        // line 39
+        // line 40
         echo twig_escape_filter($this->env, (isset($context["link_dir"]) ? $context["link_dir"] : $this->getContext($context, "link_dir")), "html", null, true);
         echo "dashboard\">
                             <i class=\"material-icons\">dashboard</i>
@@ -88,7 +89,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
                     </li>
                     <li>
                         <a href=\"";
-        // line 45
+        // line 46
         echo twig_escape_filter($this->env, (isset($context["link_dir"]) ? $context["link_dir"] : $this->getContext($context, "link_dir")), "html", null, true);
         echo "userDashboard\">
                             <i class=\"material-icons\">person</i>
@@ -97,7 +98,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
                     </li>
                     <li>
                         <a href=\"";
-        // line 51
+        // line 52
         echo twig_escape_filter($this->env, (isset($context["link_dir"]) ? $context["link_dir"] : $this->getContext($context, "link_dir")), "html", null, true);
         echo "table.html\">
                             <i class=\"material-icons\">content_paste</i>
@@ -118,7 +119,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
                     </li> -->
                     <li>
                         <a href=\"";
-        // line 69
+        // line 70
         echo twig_escape_filter($this->env, (isset($context["link_dir"]) ? $context["link_dir"] : $this->getContext($context, "link_dir")), "html", null, true);
         echo "maps\">
                             <i class=\"material-icons\">location_on</i>
@@ -126,7 +127,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
                         </a>
                     </li>
                    ";
-        // line 80
+        // line 81
         echo "                    <!-- <li class=\"active-pro\">
                         <a href=\"upgrade.html\">
                             <i class=\"material-icons\">unarchive</i>
@@ -634,64 +635,68 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
 </body>
 <!--   Core JS Files   -->
 <script src=\"";
-        // line 586
+        // line 587
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/jquery-3.2.1.min.js\" type=\"text/javascript\"></script>
 <script src=\"";
-        // line 587
+        // line 588
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/bootstrap.min.js\" type=\"text/javascript\"></script>
 <script src=\"";
-        // line 588
+        // line 589
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/material.min.js\" type=\"text/javascript\"></script>
 <!--  Charts Plugin -->
 <script src=\"";
-        // line 590
+        // line 591
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/chartist.min.js\"></script>
 <!--  Dynamic Elements plugin -->
 <script src=\"";
-        // line 592
+        // line 593
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/arrive.min.js\"></script>
 <!--  PerfectScrollbar Library -->
 <script src=\"";
-        // line 594
+        // line 595
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/perfect-scrollbar.jquery.min.js\"></script>
 <!--  Notifications Plugin    -->
 <script src=\"";
-        // line 596
+        // line 597
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/bootstrap-notify.js\"></script>
 <!--  Google Maps Plugin    -->
 <script type=\"text/javascript\" src=\"https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE\"></script>
 <!-- Material Dashboard javascript methods -->
 <script src=\"";
-        // line 600
+        // line 601
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/material-dashboard.js?v=1.2.0\"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src=\"";
-        // line 602
+        // line 603
         echo twig_escape_filter($this->env, (isset($context["web_dir"]) ? $context["web_dir"] : $this->getContext($context, "web_dir")), "html", null, true);
         echo "dashboard/assets/js/demo.js\"></script>
 <script type=\"text/javascript\">
     \$(document).ready(function() {
 
         // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
+         var test = ";
+        // line 608
+        echo twig_jsonencode_filter((isset($context["grafico"]) ? $context["grafico"] : $this->getContext($context, "grafico")));
+        echo ";
+        demo.initDashboardPageCharts(test);
 
     });
 </script>
 
 </html>";
         
-        $__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08->leave($__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08_prof);
+        $__internal_7c4199966ffcd073e73154e523ec5a35fa5026162e5d565410af9be20dff666d->leave($__internal_7c4199966ffcd073e73154e523ec5a35fa5026162e5d565410af9be20dff666d_prof);
 
         
-        $__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0->leave($__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0_prof);
+        $__internal_f2abcbc86c6d224ae5eb98c3972e9aa77942ebc9347b04b1178d205231802d49->leave($__internal_f2abcbc86c6d224ae5eb98c3972e9aa77942ebc9347b04b1178d205231802d49_prof);
 
     }
 
@@ -707,7 +712,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
 
     public function getDebugInfo()
     {
-        return array (  678 => 602,  673 => 600,  666 => 596,  661 => 594,  656 => 592,  651 => 590,  646 => 588,  642 => 587,  638 => 586,  130 => 80,  122 => 69,  101 => 51,  92 => 45,  83 => 39,  66 => 25,  55 => 17,  50 => 15,  45 => 13,  36 => 7,  32 => 6,  25 => 1,);
+        return array (  687 => 608,  679 => 603,  674 => 601,  667 => 597,  662 => 595,  657 => 593,  652 => 591,  647 => 589,  643 => 588,  639 => 587,  131 => 81,  123 => 70,  102 => 52,  93 => 46,  84 => 40,  66 => 25,  55 => 17,  50 => 15,  45 => 13,  36 => 7,  32 => 6,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -750,6 +755,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
 
         Tip 2: you can also add an image using data-image tag
     -->
+   
             <div class=\"logo\">
                 <a href=\"http://www.phoenix-dasa.com\" class=\"simple-text\">
                     Phoenix Dasa
@@ -1326,7 +1332,8 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
     \$(document).ready(function() {
 
         // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
+         var test = {{ grafico|json_encode|raw }};
+        demo.initDashboardPageCharts(test);
 
     });
 </script>

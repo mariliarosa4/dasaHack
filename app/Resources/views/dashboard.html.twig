@@ -28,6 +28,7 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
+   
             <div class="logo">
                 <a href="http://www.phoenix-dasa.com" class="simple-text">
                     Phoenix Dasa
@@ -604,7 +605,8 @@
     $(document).ready(function() {
 
         // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
+         var test = {{ grafico|json_encode|raw }};
+        demo.initDashboardPageCharts(test);
 
     });
 </script>

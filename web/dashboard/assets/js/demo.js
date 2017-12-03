@@ -2,8 +2,8 @@ type = ['', 'info', 'success', 'warning', 'danger'];
 
 
 demo = {
-    initPickColor: function() {
-        $('.pick-class-label').click(function() {
+    initPickColor: function () {
+        $('.pick-class-label').click(function () {
             var new_class = $(this).attr('new-class');
             var old_class = $('#display-buttons').attr('data-class');
             var display_div = $('#display-buttons');
@@ -16,7 +16,7 @@ demo = {
         });
     },
 
-    initDocumentationCharts: function() {
+    initDocumentationCharts: function () {
         /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
 
         dataDailySalesChart = {
@@ -45,14 +45,22 @@ demo = {
         md.startAnimationForLineChart(dailySalesChart);
     },
 
-    initDashboardPageCharts: function() {
+    initDashboardPageCharts: function (grafico) {
 
         /* ----------==========     Daily Sales Chart initialization    ==========---------- */
-
+        console.log(grafico);
+        labels = [];
+        series = [];
+        for (array in grafico) {
+            console.log(grafico[array]);
+            labels.push(grafico[array]['exam_year_week']);
+            series.push(grafico[array]['avg_kvp']);
+        }
+        console.log(series);
         dataDailySalesChart = {
-            labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+            labels: labels,
             series: [
-                [12, 17, 7, 17, 23, 18, 38]
+                series
             ]
         };
 
@@ -129,13 +137,13 @@ demo = {
         };
         var responsiveOptions = [
             ['screen and (max-width: 640px)', {
-                seriesBarDistance: 5,
-                axisX: {
-                    labelInterpolationFnc: function(value) {
-                        return value[0];
+                    seriesBarDistance: 5,
+                    axisX: {
+                        labelInterpolationFnc: function (value) {
+                            return value[0];
+                        }
                     }
-                }
-            }]
+                }]
         ];
         var emailsSubscriptionChart = Chartist.Bar('#emailsSubscriptionChart', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
 
@@ -144,97 +152,97 @@ demo = {
 
     },
 
-    initGoogleMaps: function() {
+    initGoogleMaps: function () {
         var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
         var mapOptions = {
             zoom: 13,
             center: myLatlng,
             scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
             styles: [{
-                "featureType": "water",
-                "stylers": [{
-                    "saturation": 43
+                    "featureType": "water",
+                    "stylers": [{
+                            "saturation": 43
+                        }, {
+                            "lightness": -11
+                        }, {
+                            "hue": "#0088ff"
+                        }]
                 }, {
-                    "lightness": -11
+                    "featureType": "road",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                            "hue": "#ff0000"
+                        }, {
+                            "saturation": -100
+                        }, {
+                            "lightness": 99
+                        }]
                 }, {
-                    "hue": "#0088ff"
-                }]
-            }, {
-                "featureType": "road",
-                "elementType": "geometry.fill",
-                "stylers": [{
-                    "hue": "#ff0000"
+                    "featureType": "road",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                            "color": "#808080"
+                        }, {
+                            "lightness": 54
+                        }]
                 }, {
-                    "saturation": -100
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                            "color": "#ece2d9"
+                        }]
                 }, {
-                    "lightness": 99
-                }]
-            }, {
-                "featureType": "road",
-                "elementType": "geometry.stroke",
-                "stylers": [{
-                    "color": "#808080"
+                    "featureType": "poi.park",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                            "color": "#ccdca1"
+                        }]
                 }, {
-                    "lightness": 54
-                }]
-            }, {
-                "featureType": "landscape.man_made",
-                "elementType": "geometry.fill",
-                "stylers": [{
-                    "color": "#ece2d9"
-                }]
-            }, {
-                "featureType": "poi.park",
-                "elementType": "geometry.fill",
-                "stylers": [{
-                    "color": "#ccdca1"
-                }]
-            }, {
-                "featureType": "road",
-                "elementType": "labels.text.fill",
-                "stylers": [{
-                    "color": "#767676"
-                }]
-            }, {
-                "featureType": "road",
-                "elementType": "labels.text.stroke",
-                "stylers": [{
-                    "color": "#ffffff"
-                }]
-            }, {
-                "featureType": "poi",
-                "stylers": [{
-                    "visibility": "off"
-                }]
-            }, {
-                "featureType": "landscape.natural",
-                "elementType": "geometry.fill",
-                "stylers": [{
-                    "visibility": "on"
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                            "color": "#767676"
+                        }]
                 }, {
-                    "color": "#b8cb93"
+                    "featureType": "road",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                            "color": "#ffffff"
+                        }]
+                }, {
+                    "featureType": "poi",
+                    "stylers": [{
+                            "visibility": "off"
+                        }]
+                }, {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                            "visibility": "on"
+                        }, {
+                            "color": "#b8cb93"
+                        }]
+                }, {
+                    "featureType": "poi.park",
+                    "stylers": [{
+                            "visibility": "on"
+                        }]
+                }, {
+                    "featureType": "poi.sports_complex",
+                    "stylers": [{
+                            "visibility": "on"
+                        }]
+                }, {
+                    "featureType": "poi.medical",
+                    "stylers": [{
+                            "visibility": "on"
+                        }]
+                }, {
+                    "featureType": "poi.business",
+                    "stylers": [{
+                            "visibility": "simplified"
+                        }]
                 }]
-            }, {
-                "featureType": "poi.park",
-                "stylers": [{
-                    "visibility": "on"
-                }]
-            }, {
-                "featureType": "poi.sports_complex",
-                "stylers": [{
-                    "visibility": "on"
-                }]
-            }, {
-                "featureType": "poi.medical",
-                "stylers": [{
-                    "visibility": "on"
-                }]
-            }, {
-                "featureType": "poi.business",
-                "stylers": [{
-                    "visibility": "simplified"
-                }]
-            }]
 
         }
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -248,7 +256,7 @@ demo = {
         marker.setMap(map);
     },
 
-    showNotification: function(from, align) {
+    showNotification: function (from, align) {
         color = Math.floor((Math.random() * 4) + 1);
 
         $.notify({
