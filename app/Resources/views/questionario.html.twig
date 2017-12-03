@@ -50,13 +50,17 @@
                             </div>
                             {% set counter = counter + 1 %}
                         {%endfor%}
-                        <a class="waves-effect waves-light btn blue" onclick="salvarQuestionario('{{acession}}', '{{link_dir}}');">Salvar</a>
 
                         <div class="mdl-progress mdl-js-progress mdl-progress__indeterminate" id="cadastroCompleto" style="display: none"></div>
 
+
+
                     </div>
 
+                    <a class="waves-effect waves-light btn blue center" onclick="salvarQuestionario('{{acession}}', '{{link_dir}}');">Salvar</a>
+
                 </form>
+
             </div>
 
         </div>
@@ -69,136 +73,136 @@
 <script src="{{web_dir}}assets/js/jquery.barrating.js"></script>
 <script type="text/javascript" src="{{web_dir}}materialize/js/materialize.min.js"></script>
 <script type="text/javascript">
-                                                var jsonRespostas = {};
-                                                $(function () {
-                                                    $('#example1').barrating('show', {
-                                                        theme: 'bars-square',
-                                                        showValues: true,
-                                                        showSelectedRating: false,
-                                                        onSelect: function (value, text, event) {
-                                                            if (typeof (event) !== 'undefined') {
-                                                                // rating was selected by a user
-                                                                console.log(event.target);
-                                                                jsonRespostas.primeira = value;
-                                                                console.log(jsonRespostas);
-                                                            } else {
-                                                                // rating was selected programmatically
-                                                                // by calling `set` method
-                                                            }
-                                                        }
-                                                    });
-                                                    $('#example2').barrating({
-                                                        theme: 'bars-square',
-                                                        showValues: true,
-                                                        showSelectedRating: false,
-                                                        onSelect: function (value, text, event) {
-                                                            if (typeof (event) !== 'undefined') {
-                                                                // rating was selected by a user
-                                                                console.log(event.target);
-                                                                jsonRespostas.segunda = value;
-                                                                console.log(jsonRespostas);
-                                                            } else {
-                                                                // rating was selected programmatically
-                                                                // by calling `set` method
-                                                            }
-                                                        }
+                                var jsonRespostas = {};
+                                $(function () {
+                                    $('#example1').barrating('show', {
+                                        theme: 'bars-square',
+                                        showValues: true,
+                                        showSelectedRating: false,
+                                        onSelect: function (value, text, event) {
+                                            if (typeof (event) !== 'undefined') {
+                                                // rating was selected by a user
+                                                console.log(event.target);
+                                                jsonRespostas.primeira = value;
+                                                console.log(jsonRespostas);
+                                            } else {
+                                                // rating was selected programmatically
+                                                // by calling `set` method
+                                            }
+                                        }
+                                    });
+                                    $('#example2').barrating({
+                                        theme: 'bars-square',
+                                        showValues: true,
+                                        showSelectedRating: false,
+                                        onSelect: function (value, text, event) {
+                                            if (typeof (event) !== 'undefined') {
+                                                // rating was selected by a user
+                                                console.log(event.target);
+                                                jsonRespostas.segunda = value;
+                                                console.log(jsonRespostas);
+                                            } else {
+                                                // rating was selected programmatically
+                                                // by calling `set` method
+                                            }
+                                        }
 
-                                                    });
-                                                    $('#example3').barrating({
-                                                        theme: 'bars-square',
-                                                        showValues: true,
-                                                        showSelectedRating: false,
-                                                        onSelect: function (value, text, event) {
-                                                            if (typeof (event) !== 'undefined') {
-                                                                // rating was selected by a user
-                                                                console.log(event.target);
-                                                                jsonRespostas.terceira = value;
-                                                                console.log(jsonRespostas);
-                                                            } else {
-                                                                // rating was selected programmatically
-                                                                // by calling `set` method
-                                                            }
-                                                        }
-
-
-                                                    });
-                                                    $('#example4').barrating({
-                                                        theme: 'bars-square',
-                                                        showValues: true,
-                                                        showSelectedRating: false,
-                                                        onSelect: function (value, text, event) {
-                                                            if (typeof (event) !== 'undefined') {
-                                                                // rating was selected by a user
-                                                                console.log(event.target);
-                                                                jsonRespostas['primeira'] = value;
-                                                                console.log(jsonRespostas);
-                                                            } else {
-                                                                // rating was selected programmatically
-                                                                // by calling `set` method
-                                                            }
-                                                        }
+                                    });
+                                    $('#example3').barrating({
+                                        theme: 'bars-square',
+                                        showValues: true,
+                                        showSelectedRating: false,
+                                        onSelect: function (value, text, event) {
+                                            if (typeof (event) !== 'undefined') {
+                                                // rating was selected by a user
+                                                console.log(event.target);
+                                                jsonRespostas.terceira = value;
+                                                console.log(jsonRespostas);
+                                            } else {
+                                                // rating was selected programmatically
+                                                // by calling `set` method
+                                            }
+                                        }
 
 
-                                                    });
-                                                    $('#example5').barrating({
-                                                        theme: 'bars-square',
-                                                        showValues: true,
-                                                        showSelectedRating: false,
-                                                        onSelect: function (value, text, event) {
-                                                            if (typeof (event) !== 'undefined') {
-                                                                // rating was selected by a user
-                                                                console.log(event.target);
-                                                                jsonRespostas.quinta = value;
-                                                                console.log(jsonRespostas);
-                                                            } else {
-                                                                // rating was selected programmatically
-                                                                // by calling `set` method
-                                                            }
-                                                        }
+                                    });
+                                    $('#example4').barrating({
+                                        theme: 'bars-square',
+                                        showValues: true,
+                                        showSelectedRating: false,
+                                        onSelect: function (value, text, event) {
+                                            if (typeof (event) !== 'undefined') {
+                                                // rating was selected by a user
+                                                console.log(event.target);
+                                                jsonRespostas['primeira'] = value;
+                                                console.log(jsonRespostas);
+                                            } else {
+                                                // rating was selected programmatically
+                                                // by calling `set` method
+                                            }
+                                        }
 
 
-                                                    });
-                                                });
+                                    });
+                                    $('#example5').barrating({
+                                        theme: 'bars-square',
+                                        showValues: true,
+                                        showSelectedRating: false,
+                                        onSelect: function (value, text, event) {
+                                            if (typeof (event) !== 'undefined') {
+                                                // rating was selected by a user
+                                                console.log(event.target);
+                                                jsonRespostas.quinta = value;
+                                                console.log(jsonRespostas);
+                                            } else {
+                                                // rating was selected programmatically
+                                                // by calling `set` method
+                                            }
+                                        }
 
 
-                                                function salvarQuestionario(acession_number, caminho) {
+                                    });
+                                });
 
-                                                    if ($('.form-container')[0].checkValidity()) {
-                                                        var arraySelected = {};
-                                                        $("select.rating").each(function (i, sel) {
-                                                            console.log($("select.rating").attr('name'));
-                                                            var name = $(sel).attr('name');
-                                                            var key = name.match(/\[(\d+)\]/)[1];
-                                                            var selectedVal = $(sel).val();
 
-                                                            arraySelected[key] = (selectedVal);
-                                                        });
+                                function salvarQuestionario(acession_number, caminho) {
 
-                                                        console.log(JSON.stringify(arraySelected));
-                                                        $.ajax({
-                                                            type: 'post',
-                                                            data: JSON.stringify(arraySelected),
-                                                            contentType: 'application/json',
-                                                            dataType: 'json',
-                                                            url: '/dasaHack/app_dev.php/salvarQuestionario/' + acession_number + '',
-                                                            cache: false,
-                                                            processData: false,
-                                                            async: false,
-                                                            success: function (response) {
-                                                                console.log(response);
-                                                                Materialize.toast('Avaliação salva com sucesso!', 4000);
-                                                            },
-                                                            error: function (jqXHR, textStatus, errorThrown) {
-                                                                console.log(errorThrown);
-                                                                Materialize.toast('Falha ao salvar avaliação.', 4000)
-                                                            }
+                                    if ($('.form-container')[0].checkValidity()) {
+                                        var arraySelected = {};
+                                        $("select.rating").each(function (i, sel) {
+                                            console.log($("select.rating").attr('name'));
+                                            var name = $(sel).attr('name');
+                                            var key = name.match(/\[(\d+)\]/)[1];
+                                            var selectedVal = $(sel).val();
 
-                                                        });
-                                                        return false;
-                                                    } else {
-                                                        alert("Todas as avaliações devem ser preenchidas.");
-                                                    }
-                                                }
-                                                
-                                                
+                                            arraySelected[key] = (selectedVal);
+                                        });
+
+                                        console.log(JSON.stringify(arraySelected));
+                                        $.ajax({
+                                            type: 'post',
+                                            data: JSON.stringify(arraySelected),
+                                            contentType: 'application/json',
+                                            dataType: 'json',
+                                            url: '/dasaHack/app_dev.php/salvarQuestionario/' + acession_number + '',
+                                            cache: false,
+                                            processData: false,
+                                            async: false,
+                                            success: function (response) {
+                                                console.log(response);
+                                                Materialize.toast('Avaliação salva com sucesso!', 4000);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown) {
+                                                console.log(errorThrown);
+                                                Materialize.toast('Falha ao salvar avaliação.', 4000)
+                                            }
+
+                                        });
+                                        return false;
+                                    } else {
+                                        alert("Todas as avaliações devem ser preenchidas.");
+                                    }
+                                }
+
+
 </script>

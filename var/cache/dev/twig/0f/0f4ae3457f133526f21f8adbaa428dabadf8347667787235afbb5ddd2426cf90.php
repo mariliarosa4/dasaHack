@@ -15,11 +15,11 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ff542b1609802864e4004a057648e31aed6666217badb07777777992c317e89d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_ff542b1609802864e4004a057648e31aed6666217badb07777777992c317e89d->enter($__internal_ff542b1609802864e4004a057648e31aed6666217badb07777777992c317e89d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard.html.twig"));
+        $__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08->enter($__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard.html.twig"));
 
-        $__internal_815a897eaaf8b0ba539e90a9c5f1e9e0f162e490b9fd9cb5ba037ec1f0561282 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_815a897eaaf8b0ba539e90a9c5f1e9e0f162e490b9fd9cb5ba037ec1f0561282->enter($__internal_815a897eaaf8b0ba539e90a9c5f1e9e0f162e490b9fd9cb5ba037ec1f0561282_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard.html.twig"));
+        $__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0->enter($__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "dashboard.html.twig"));
 
         // line 1
         echo "<!doctype html>
@@ -96,41 +96,43 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
                         </a>
                     </li>
                     <li>
-                        <a href=\"./table.html\">
+                        <a href=\"";
+        // line 51
+        echo twig_escape_filter($this->env, (isset($context["link_dir"]) ? $context["link_dir"] : $this->getContext($context, "link_dir")), "html", null, true);
+        echo "table.html\">
                             <i class=\"material-icons\">content_paste</i>
                             <p>Sumarização de Dados</p>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href=\"./typography.html\">
                             <i class=\"material-icons\">library_books</i>
                             <p>Typography</p>
                         </a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a href=\"./icons.html\">
                             <i class=\"material-icons\">bubble_chart</i>
                             <p>Icons</p>
                         </a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href=\"./maps.html\">
+                        <a href=\"";
+        // line 69
+        echo twig_escape_filter($this->env, (isset($context["link_dir"]) ? $context["link_dir"] : $this->getContext($context, "link_dir")), "html", null, true);
+        echo "maps\">
                             <i class=\"material-icons\">location_on</i>
                             <p>Maps</p>
                         </a>
                     </li>
-                    <li>
-                        <a href=\"./notifications.html\">
-                            <i class=\"material-icons text-gray\">notifications</i>
-                            <p>Notifications</p>
-                        </a>
-                    </li>
-                    <li class=\"active-pro\">
+                   ";
+        // line 80
+        echo "                    <!-- <li class=\"active-pro\">
                         <a href=\"upgrade.html\">
                             <i class=\"material-icons\">unarchive</i>
                             <p>Upgrade to PRO</p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -686,10 +688,10 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
 
 </html>";
         
-        $__internal_ff542b1609802864e4004a057648e31aed6666217badb07777777992c317e89d->leave($__internal_ff542b1609802864e4004a057648e31aed6666217badb07777777992c317e89d_prof);
+        $__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08->leave($__internal_3aed92511e3ec9729879e5440b4ffe2170450b3c326764b25c834099fbb1ab08_prof);
 
         
-        $__internal_815a897eaaf8b0ba539e90a9c5f1e9e0f162e490b9fd9cb5ba037ec1f0561282->leave($__internal_815a897eaaf8b0ba539e90a9c5f1e9e0f162e490b9fd9cb5ba037ec1f0561282_prof);
+        $__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0->leave($__internal_29f4bddb3a3a6311ae45ce70f190c65efab218edf982a1b22a302ab6bc34f5b0_prof);
 
     }
 
@@ -705,7 +707,7 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
 
     public function getDebugInfo()
     {
-        return array (  676 => 602,  671 => 600,  664 => 596,  659 => 594,  654 => 592,  649 => 590,  644 => 588,  640 => 587,  636 => 586,  92 => 45,  83 => 39,  66 => 25,  55 => 17,  50 => 15,  45 => 13,  36 => 7,  32 => 6,  25 => 1,);
+        return array (  678 => 602,  673 => 600,  666 => 596,  661 => 594,  656 => 592,  651 => 590,  646 => 588,  642 => 587,  638 => 586,  130 => 80,  122 => 69,  101 => 51,  92 => 45,  83 => 39,  66 => 25,  55 => 17,  50 => 15,  45 => 13,  36 => 7,  32 => 6,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -768,41 +770,41 @@ class __TwigTemplate_ea018f8b4454b09c86ba1e03b8e8f4525f629976ce5890b8055dd5e130b
                         </a>
                     </li>
                     <li>
-                        <a href=\"./table.html\">
+                        <a href=\"{{link_dir}}table.html\">
                             <i class=\"material-icons\">content_paste</i>
                             <p>Sumarização de Dados</p>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href=\"./typography.html\">
                             <i class=\"material-icons\">library_books</i>
                             <p>Typography</p>
                         </a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a href=\"./icons.html\">
                             <i class=\"material-icons\">bubble_chart</i>
                             <p>Icons</p>
                         </a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href=\"./maps.html\">
+                        <a href=\"{{link_dir}}maps\">
                             <i class=\"material-icons\">location_on</i>
                             <p>Maps</p>
                         </a>
                     </li>
-                    <li>
+                   {# <li>
                         <a href=\"./notifications.html\">
                             <i class=\"material-icons text-gray\">notifications</i>
                             <p>Notifications</p>
                         </a>
-                    </li>
-                    <li class=\"active-pro\">
+                    </li>#}
+                    <!-- <li class=\"active-pro\">
                         <a href=\"upgrade.html\">
                             <i class=\"material-icons\">unarchive</i>
                             <p>Upgrade to PRO</p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

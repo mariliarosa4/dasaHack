@@ -19,9 +19,9 @@ class DefaultController extends Controller {
     }
 
      /**
-     * @Route("/dashboard", name="dashboard")
+     * @Route("/userDashboard", name="user")
      */
-    public function userAction(Request $request) {
+    public function userDashboardAction(Request $request) {
         // replace this example code with whatever you need
         return $this->render('user.html.twig', [
                     'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
@@ -29,7 +29,7 @@ class DefaultController extends Controller {
     }
 
      /**
-     * @Route("/dashboard", name="dashboard")
+     * @Route("/table", name="table")
      */
     public function tableAction(Request $request) {
         // replace this example code with whatever you need
@@ -48,14 +48,6 @@ class DefaultController extends Controller {
         ]);
     }
 
-    /**
-     * @Route("/userDashboard", name="userDashboard")
-     */
-    public function userDashboardAction(Request $request) {
-        // replace this example code with whatever you need
-        return $this->render('maps.html.twig', [
-                    'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
-        ]);
-    }
+ 
 
 }

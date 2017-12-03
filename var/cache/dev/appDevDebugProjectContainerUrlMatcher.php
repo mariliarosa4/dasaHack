@@ -108,14 +108,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::dashboardAction',  '_route' => 'dashboard',);
         }
 
+        // user
+        if ('/userDashboard' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::userDashboardAction',  '_route' => 'user',);
+        }
+
+        // table
+        if ('/table' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::tableAction',  '_route' => 'table',);
+        }
+
         // maps
         if ('/maps' === $pathinfo) {
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::mapsAction',  '_route' => 'maps',);
-        }
-
-        // userDashboard
-        if ('/userDashboard' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::userDashboardAction',  '_route' => 'userDashboard',);
         }
 
         // questionario
