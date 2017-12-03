@@ -1,0 +1,245 @@
+AppBundle\Entity\Exam:
+    type: entity
+    table: Exam
+    indexes:
+        Exam_fk0:
+            columns:
+                - id_modality
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        patientName:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: patient_name
+        patientId:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: patient_id
+        patientSize:
+            type: float
+            nullable: false
+            precision: 64
+            scale: 2
+            column: patient_size
+        patientWeight:
+            type: float
+            nullable: true
+            precision: 64
+            scale: 2
+            column: patient_weight
+        patientSex:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: false
+            column: patient_sex
+        patientAge:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: patient_age
+        patientBday:
+            type: datetime
+            nullable: true
+            column: patient_bday
+        institutionName:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: institution_name
+        stationName:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: station_name
+        stationAeTitle:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            column: station_ae_title
+        studyInstanceUid:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            column: study_instance_uid
+        studyId:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: study_id
+        accessionNumber:
+            type: string
+            nullable: true
+            length: 32
+            options:
+                fixed: false
+            column: accession_number
+        studyDatetime:
+            type: datetime
+            nullable: true
+            column: study_datetime
+        protocolName:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: protocol_name
+        operatorName:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: operator_name
+        kvp:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        sliceThickness:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: slice_thickness
+        tubeAngle:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: tube_angle
+        exposureCurrent:
+            type: string
+            nullable: true
+            length: 16
+            options:
+                fixed: false
+            column: exposure_current
+        exposureTime:
+            type: string
+            nullable: true
+            length: 16
+            options:
+                fixed: false
+            column: exposure_time
+        exposure:
+            type: string
+            nullable: true
+            length: 16
+            options:
+                fixed: false
+        dlp:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        ctiiVal:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: ctii_val
+        eftDose:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: eft_dose
+        ssde:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+        calibrationDate:
+            type: datetime
+            nullable: true
+            column: calibration_date
+        manufacturing:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+        numberOfImages:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: number_of_images
+        numberOfSeries:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: number_of_series
+        bodyRegion:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: body_region
+        modalityType:
+            type: string
+            nullable: true
+            length: 16
+            options:
+                fixed: false
+            column: modality_type
+        acquisitionType:
+            type: string
+            nullable: true
+            length: 16
+            options:
+                fixed: false
+            column: acquisition_type
+        pitchFactor:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: pitch_factor
+        collimation:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+    manyToOne:
+        idModality:
+            targetEntity: Modality
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_modality:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,75 @@
+AppBundle\Entity\Modality:
+    type: entity
+    table: Modality
+    indexes:
+        modality_fk0:
+            columns:
+                - id_unit
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nameEquip:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: name_equip
+        installedRoom:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: installed_room
+        aquisitionDate:
+            type: datetime
+            nullable: true
+            column: aquisition_date
+        serialNumber:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: serial_number
+        vendor:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+        installationDate:
+            type: datetime
+            nullable: true
+            column: installation_date
+        tubeInstallation:
+            type: datetime
+            nullable: true
+            column: tube_installation
+        stationAeTitle:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            column: station_ae_title
+    manyToOne:
+        idUnit:
+            targetEntity: Unit
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_unit:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

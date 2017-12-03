@@ -1,0 +1,46 @@
+AppBundle\Entity\Resposta:
+    type: entity
+    table: Resposta
+    indexes:
+        Resposta_fk0:
+            columns:
+                - id_pergunta
+    id:
+        idResposta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_resposta
+            generator:
+                strategy: IDENTITY
+    fields:
+        nota:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        accessionNumber:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+            column: accession_number
+        timestampResposta:
+            type: datetime
+            nullable: true
+            column: timestamp_resposta
+    manyToOne:
+        idPergunta:
+            targetEntity: Pergunta
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_pergunta:
+                    referencedColumnName: id_pergunta
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

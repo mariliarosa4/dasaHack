@@ -1,0 +1,27 @@
+AppBundle\Entity\Pergunta:
+    type: entity
+    table: Pergunta
+    id:
+        idPergunta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_pergunta
+            generator:
+                strategy: IDENTITY
+    fields:
+        descricaoPergunta:
+            type: string
+            nullable: false
+            length: 120
+            options:
+                fixed: false
+            column: descricao_pergunta
+        ordem:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

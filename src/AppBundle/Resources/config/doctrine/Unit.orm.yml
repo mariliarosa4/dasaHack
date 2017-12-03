@@ -1,0 +1,41 @@
+AppBundle\Entity\Unit:
+    type: entity
+    table: Unit
+    indexes:
+        Unit_fk0:
+            columns:
+                - id_city
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+        address:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+    manyToOne:
+        idCity:
+            targetEntity: City
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_city:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

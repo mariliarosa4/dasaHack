@@ -103,13 +103,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // 
-        if ('' === $trimmedPathinfo) {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', '');
-            }
+        // dashboard
+        if ('/dashboard' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::dashboardAction',  '_route' => 'dashboard',);
+        }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::loginAction',  '_route' => '',);
+        // maps
+        if ('/maps' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::mapsAction',  '_route' => 'maps',);
+        }
+
+        // userDashboard
+        if ('/userDashboard' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::userDashboardAction',  '_route' => 'userDashboard',);
         }
 
         // questionario
